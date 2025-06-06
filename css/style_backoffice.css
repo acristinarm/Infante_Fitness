@@ -1,0 +1,7 @@
+table, th, td{
+    border: 2px solid darkblue !important;
+    border-collapse: collapse !important;
+    padding: 10px;
+    margin: auto !important;
+}
+
