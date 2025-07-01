@@ -1,6 +1,6 @@
 <?php 
 
-$conexao = new PDO("mysql:host=localhost;dbname=construcao_e_habitacao_bd;charset=utf8mb4", "root", "");
+$conexao = new PDO("mysql:host=localhost;dbname=infante_fitness_bd;charset=utf8mb4", "root", "");
 
 function selectSQL($sql){
     global $conexao;

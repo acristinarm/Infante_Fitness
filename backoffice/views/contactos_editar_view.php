@@ -2,13 +2,12 @@
 
 $contactos = getContactos();
 
-$form = isset($_GET["telefone"]) && isset($_GET["email"]) && isset($_GET["morada"]) && isset($_GET["link_facebook"]);
+$form = isset($_GET["telefone"]) && isset($_GET["email"]) && isset($_GET["morada"]);
 if($form){
     $telefone = $_GET["telefone"];
     $email = $_GET["email"];
     $morada = $_GET["morada"];
-    $link_facebook = $_GET["link_facebook"];
-    iduSQL("UPDATE contactos SET telefone='$telefone', email='$email', morada='$morada', link_facebook='$link_facebook'");
+    iduSQL("UPDATE contactos SET telefone='$telefone', email='$email', morada='$morada'");
     header("Location: contactos.php");
 }
 
@@ -39,9 +38,6 @@ if($form){
 
                 <label for="morada">Morada: </label><br>
                 <textarea name="morada" id="morada" ><?= $contactos["morada"]; ?></textarea>
-
-                <label for="facebook">Facebook: </label><br>
-                <textarea name="link_facebook" id="facebook" ><?= $contactos["link_facebook"]; ?></textarea>
                 
                 <br><br>
 

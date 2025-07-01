@@ -1,6 +1,6 @@
 <?php 
 
-$destaques_home = getDestaquesHome();
+$people_home = getPeopleHome();
 $quem_somos_home = getQuemSomos();
 
 ?>
@@ -71,19 +71,14 @@ $quem_somos_home = getQuemSomos();
 
     <div class="row m-auto d-flex flex-row justify-content-center">
 
-        <?php foreach($destaques_home as $d): ?>
+        <?php foreach($people_home as $p): ?>
             <div class="col-xl-4 col-lg-5 d-flex flex-row justify-content-center flex-wrap">
 
                 <div class="card">
-                    <img class="casas" src="<?= $d["imagem"]; ?>" class="card-img-top" alt="<?= $d["título"]; ?>">
+                    <img class="casas" src="<?= $p["imagem"]; ?>" class="card-img-top" alt="<?= $p["nome"]; ?>">
                     <div class="card-body">
-                        <div class="card-title"><?= $d["título"]; ?></div>
-                        <div class="card-text"><?= substr($d["texto"], 0, 120) ?> ...</div>
-                        <a href="destaque_especifico.php?id=<?= $d["id"]; ?>" class="d-flex flex-row justify-content-center">
-                            <div class="botao_ver_mais_2 botao d-flex flex-row justify-content-center align-items-center">
-                            Ver Mais
-                            </div>
-                        </a>
+                        <div class="card-title"><?= $p["nome"]; ?></div>
+                        <div class="card-text"><?= substr($p["subtitulo"], 0, 120) ?> ...</div>
                     </div>
                 </div>
 

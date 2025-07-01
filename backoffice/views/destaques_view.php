@@ -12,21 +12,24 @@ $destaque = getDestaques();
     </div>
 </div>
 
-<div class="row mx-0 mt-4">
+<div class="row mx-0 mt-4"> 
     <div class="col-12">
         <a href="destaque_novo.php"><button>Novo</button></a>
         <table> 
             <tr>
-                <th>Título</th>
-                <th>Mostrar na Home</th>
                 <th>Imagem</th>
-                <th>Texto</th>
+                <th>Nome</th>
+                <th>Mostrar na Home</th>
+                <th>Formação</th>
                 <th>Ações</th>
             </tr>
 
             <?php foreach($destaque as $d): ?>
 
                 <tr>
+                    <td>
+                        <img src="<?= $d["imagem"]; ?>" alt="" style="width:500px;">
+                    </td>
                     <td><?= $d["título"]; ?></td>
                     <td>
                         <?php if ($d["mostrar_home"] == 1){
@@ -34,9 +37,6 @@ $destaque = getDestaques();
                         } else { $d["mostrar_home"] = "NÃO";}
                         ?>
                         <?= $d["mostrar_home"]; ?>
-                    </td>
-                    <td>
-                        <img src="<?= $d["imagem"]; ?>" alt="" style="width:500px;">
                     </td>
                     <td><?= substr($d["texto"], 0, 200); ?> ... </td>
                     <td>

@@ -19,14 +19,12 @@ $contactos = getContactos();
                 <th>Telefone</th>
                 <th>E-mail</th>
                 <th>Morada</th>
-                <th>Link Facebook</th>
                 <th>Ações</th>
             </tr>
             <tr>
                 <td><?= $contactos["telefone"]; ?></td>
                 <td><?= $contactos["email"]; ?></td>
                 <td><?= $contactos["morada"]; ?></td>
-                <td><?= $contactos["link_facebook"]; ?></td>
                 <td>
                     <a href="contactos_editar.php?id=<?= $contactos["id"]; ?>"><button>Editar</button></a>
                 </td>

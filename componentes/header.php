@@ -13,7 +13,9 @@ $banner = getBanner();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONSTRUÇÃO E HABITAÇÃO</title>
+    <title>INFANTE FITNESS</title>
+    <link rel="icon" href="uploads/logo_sem_fundo.png" sizes="64x64" type="image/png">
+
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -25,6 +27,8 @@ $banner = getBanner();
     <!-- JAVASCRIPT -->
     <script src="main.js" defer></script>
 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
 </head>
 
 <body onload="scrollAutomatico('<?= $menu_atual; ?>')">
@@ -32,32 +36,32 @@ $banner = getBanner();
     <header class="container-fluid">
         <div class="row d-none d-sm-block">
             <div class="col p-0 m-0">
-                <nav class="navbar_desktop navbar p-0 navbar-expand-lg ">
+                <nav class="navbar_desktop navbar px-5 navbar-expand-lg ">
                     <div class="container-fluid">
-                        <a class="navbar-brand"><img id="logo" src="uploads/logo.png" alt="logo.png"></a>
+                        <a class="navbar-brand"><img id="logo" src="uploads/logo_sem_fundo.png" alt="logo.png"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse d-flex justify-content-end align-items-end" id="navbarSupportedContent">
                             <ul class="navbar-nav pt-4">
                                 <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "home") ? "active" : ""; ?>" aria-current="page" href="index.php">Home</a>
                                 </li>
-                                <li class="nav-item">
+<!--                                 <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "quem_somos") ? "active" : ""; ?>" href="quem_somos.php">Quem Somos </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "socios") ? "active" : ""; ?>" href="socios.php">Sócios</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "noticias") ? "active" : ""; ?>" href="noticias.php">Notícias</a>
+ -->                                <li class="nav-item">
+                                    <a class="nav-link px-0 <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Infante People</a>
                                 </li>
-                                <li class="nav-item">
+<!--                                 <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "destaques" || $menu_atual == "destaque_especifico") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
                                 </li>
-                                <li class="nav-item dropdown">
+ -->                                <li class="nav-item dropdown">
                                     <a class="nav-link px-0 <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_empreendimentos">
-                                        Empreendimentos
+                                        Serviços
                                     </a>
                                     <ul class="dropdown-menu" id="menu_desktop">
                                         <?php foreach($empreendimentos as $i => $e): ?>
@@ -69,10 +73,10 @@ $banner = getBanner();
                                     </ul>
                                 </li>
 
-                                <li class="nav-item">
+<!--                                 <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "centro_ferias") ? "active" : ""; ?>" href="centro_f.php">Centro de Férias</a> 
                                 </li>
-                                <li class="nav-item">
+ -->                                <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a> 
                                 </li>
                             </ul>
@@ -226,7 +230,7 @@ $banner = getBanner();
 
                         <img src="<?= $banner[1]["imagem"]; ?>" alt="">
 
-                    <?php elseif ($menu_atual == "notícias"): ?>
+                    <?php elseif ($menu_atual == "infante_people"): ?>
 
                         <img src="<?=$banner[2]["imagem"]; ?>" alt="">
 

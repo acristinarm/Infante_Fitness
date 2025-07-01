@@ -59,11 +59,11 @@ $default_timezone = 'Etc/UTC'; // UTC
 
 // Root path for file manager
 // use absolute path of directory i.e: '/var/www/folder' or $_SERVER['DOCUMENT_ROOT'].'/folder'
-$root_path = $_SERVER['DOCUMENT_ROOT'] . "/construcao_e_habitacao/uploads/";
+$root_path = $_SERVER['DOCUMENT_ROOT'] . "/infante_fitness/uploads/";
 
 // Root url for links in file manager.Relative to $http_host. Variants: '', 'path/to/subfolder'
 // Will not working if $root_path will be outside of server document root
-$root_url = '/construcao_e_habitacao/uploads/';
+$root_url = '/infante_fitness/uploads/';
 
 // Server hostname. Can set manually if wrong
 // $_SERVER['HTTP_HOST'].'/folder'
@@ -4307,5 +4307,6 @@ function lng($txt) {
     else if (isset($tr['en'][$txt])) return fm_enc($tr['en'][$txt]);
     else return "$txt";
 }
+
 
 ?>

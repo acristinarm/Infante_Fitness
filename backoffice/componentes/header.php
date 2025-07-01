@@ -62,7 +62,7 @@ if(!verificarLogin()){
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($menu_atual == "noticias") ? "active" : ""; ?>" href="noticias.php">Notícias</a>
+                                    <a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Coaches</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "destaques") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
