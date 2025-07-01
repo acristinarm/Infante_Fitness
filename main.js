@@ -16,5 +16,3 @@ function scrollAutomatico(menu_atual){
         main.scrollIntoView();    
     }
 }
-
-

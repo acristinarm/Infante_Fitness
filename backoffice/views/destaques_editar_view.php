@@ -41,7 +41,8 @@ if($form){
                 <input type="hidden" name="id" value="<?= $id; ?>">
 
                 <label for="titulo">Título: </label>
-                <input type="text" name="título" id="título" required style="width:500px;" value="<?= $destaque_especifico["título"]; ?>">
+                <textarea name="título" id="título" cols="120" rows="15"><?= $destaque_especifico["título"]; ?></textarea>
+
 
                 <br><br> 
 

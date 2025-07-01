@@ -330,15 +330,16 @@ a{text-decoration: none !important;}
 }
 
 .linha_laranja{
-    width: 78px;
+    width: 350px;
     height: 3px;
-    background-color: var(--cor-laranja);
+    border-radius: 100%;
+    background-color: aqua;
 }
 
 .linha_laranja_mobile{
     width: 47px;
     height: 3px;
-    background-color: var(--cor-laranja);
+    background-color: aqua;
 }
 
 .bem_vindo{
@@ -828,6 +829,12 @@ textarea::placeholder{
         height: 192px;
     }
 
+}
+
+.nutri_img{
+    width: 250px !important;
+    height: 250px;
+    border-radius: 100% !important;
 }
 
 .paginacao a{

@@ -50,17 +50,21 @@ $destaques = getDestaquesPagina($pagina);
         <?php foreach($people as $p): ?>
             <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
                 <div class="card noticias" style="border:none;">
-                    <img class="coaches card-img-top" src="<?= $p["imagem"]; ?>" alt="<?= $p["nome"]; ?>">
+                    <img class="coaches m-auto card-img-top" 
+                        src="<?= htmlspecialchars($p["imagem"]); ?>" 
+                        alt="<?= strip_tags($p["nome"]); ?>">
+
                     <div class="card-body">
-                        <div class="card-title"><?= $p["nome"]; ?></div>
-                        <div class="card-subtitle mb-2 text-muted"><?= $p["subtitulo"]; ?></div>
-                        <div class="card-text text_noticias"><?= substr($p["formacao"], 0, 300); ?></div>
+                        <div class="card-title text-center"><?= strip_tags($p["nome"]); ?></div>
+                        <div class="card-subtitle mb-2 text-muted text-center"><?= strip_tags($p["subtitulo"]); ?></div>
+                        <div class="card-text text_noticias"><?= $p["formacao"]; ?></div>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
 
     </div>
+
 
     <div class="row conteudo_simples d-none d-sm-block">
 
@@ -87,23 +91,24 @@ $destaques = getDestaquesPagina($pagina);
 
     </div>
 
-    <div class="row d-flex flex-row justify-content-center" id="casas_destaques">
+    <div class="row d-flex flex-row justify-content-center">
 
         <?php foreach($destaques as $d): ?>
-            <div class="col-lg-5">
-
-                <div class="card">
-                    <img class="casas" src="<?= $d["imagem"]; ?>" class="card-img-top" alt="<?= $d["título"]; ?>">
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+                <div class="card" style="border:none;">
+                    <img class="nutri_img m-auto card-img-top" src="<?= $d["imagem"]; ?>" alt="<?= strip_tags($d["título"]); ?>">
                     <div class="card-body">
-                        <p class="card-title"><?= $d["título"]; ?></p>
-                        <div class="card-text"><?= substr($d["texto"], 0, 120) ?> ...</div>
+                        <div class="card-title text-center"><?= $d["título"]; ?></div>
+                        <div class="card-text text_noticias">
+                            <?= $d["texto"]; ?>
+                        </div>
                     </div>
                 </div>
-
             </div>
         <?php endforeach; ?>
 
     </div>
+
 
 
     
