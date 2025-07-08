@@ -131,29 +131,6 @@ $contactos = getContactos();
 
 <?php endif; ?>
 
-<!-- <div class="row w-100 p-0 m-0 d-none d-sm-block">
-    <div class="col p-0 mapa" style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%px;height:500px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=torre+de+belem&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
-</div>
-
-<div class="row d-block p-0 m-0 d-sm-none">
-    <div class="col p-0 mapa_mobile" style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%;height:323px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=torre+de+belem&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
-</div> -->
-
-
-<!-- <div class="row w-100 p-0 m-0 d-block d-lg-none" id="footer_facebook_mobile">
-    <div class="col d-flex flex-row justify-content-center p-0">
-        <div class="conteudo ">
-            <div class="linha_mobile"></div>
-
-            <div class="col-8 copyright_mobile d-flex flex-row justify-content-center m-auto">
-                <a href="https://anacrebelo.eu/" target="_blank">Copyright &copy; <?= date("Y"); ?> Ana Rebelo. Todos os direitos reservados.</a>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
 </footer>
 
 </body> 

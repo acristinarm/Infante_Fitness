@@ -348,7 +348,7 @@ a{text-decoration: none !important;}
     text-align: center;
     color: var(--cor-darkblue);
     font-weight: 400;
-    font-size: 38px;
+    font-size: 45px;
     line-height: 58px !important;
 }
 
@@ -367,7 +367,7 @@ a{text-decoration: none !important;}
     text-align: center;
     color: var(--cor-darkblue);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 35px;
     line-height: 30px !important;
 }
 
@@ -436,34 +436,70 @@ a{text-decoration: none !important;}
     width: 150px;
 }
 
-.textos_contactos p{
-    color: var(--cor-darkblue);
+.textos_contactos {
+    background-color: var(--cor-darkblue);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media (min-width: 992px){
+    .textos_contactos{
+        width: 400px !important;
+    }
+}
+
+.textos_contactos p {
+    color: lightgray;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 25px;
 }
 
-.contactos_editavel{
-    color: var(--cor-darkblue);
-    font-weight: 500;
-    font-size: 25px;
-    margin-top: -15px;
-    margin-bottom: 34px;
+@media (max-width: 991.98px) {
+    .textos_contactos p {
+        font-size: 18px;
+    }
 }
 
-.textos_contactos_mobile p{
-    color: var(--cor-darkblue);
+
+.contactos_editavel{
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: -15px !important;
+}
+
+.textos_contactos_mobile {
+    background-color: var(--cor-darkblue);
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%;
+    word-wrap: break-word; /* evita overflow com textos longos */
+}
+
+.textos_contactos_mobile p {
+    color: lightgray;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 17px;
+    word-wrap: break-word; /* reforça para textos dentro dos <p> */
 }
 
 .contactos_editavel_mobile{
-    color: var(--cor-darkblue);
     font-weight: 500;
     font-size: 17px;
-    margin-top: -15px;
+    margin-top: -10px;
     margin-bottom: 21px;
+}
+
+.contactos_azul{
+    border-bottom: 2px solid aqua;
+    height: 30px;
+}
+
+.contactos_azul_mobile{
+    border-bottom: 2px solid aqua;
+    height: 20px;
+    display: inline-block;
 }
 
 #contactos_form input{
@@ -488,12 +524,6 @@ a{text-decoration: none !important;}
 
 #contactos_form_mobile input:nth-child(odd){
     margin-bottom: 23px;
-}
-
-@media (min-width: 1400px){
-    .textos_contactos{
-        padding-left: 80px !important;
-    }
 }
 
 input::placeholder{
@@ -576,16 +606,6 @@ textarea::placeholder{
     color: var(--cor-darkblue);
 }
 
-#recaptcha{
-    width: 250px;
-    height: 60px;
-    margin-left: 120px !important;
-}
-
-#recaptcha_mobile{
-    width: 150px;
-    height: 40px;
-}
 
 .botao{
     border: 2px solid var(--cor-darkblue);
@@ -621,10 +641,56 @@ textarea::placeholder{
 }
 
 .botao_contactos_mobile{
-    width: 101px !important;
+    width: 80px !important;
     height: 30px;
     text-transform: uppercase;
     font-weight: 500;
+}
+
+.logo_infante {
+    margin-bottom: 0;
+    font-size: 45px !important;
+}
+
+.logo_fitness {
+    background-color: aqua;
+    color: var(--cor-darkblue) !important;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    margin-top: -10px;
+    text-transform: none !important;
+}
+
+.logo_infante_mobile {
+    margin-bottom: 0;
+    font-size: 35px !important;
+}
+
+.logo_fitness_mobile {
+    background-color: aqua;
+    color: var(--cor-darkblue) !important;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: -10px;
+    text-transform: none !important;
+}
+
+.mapa{
+    margin-top: 50px !important;
+    margin-bottom: -100px !important;
+}
+
+.mapa_mobile{
+    margin-top: 50px !important;
+    margin-bottom: -60px !important;
+}
+
+@media (max-width: 991px) and (min-width: 576px) {
+    .mapa {
+        margin-bottom: -55px !important; 
+    }
 }
 
 

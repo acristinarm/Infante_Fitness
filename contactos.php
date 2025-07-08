@@ -5,7 +5,7 @@ $menu_atual = "contactos";
 require("requisicoes.php");
 
 $showCarousel = false;
-$showContactos = false;
+$showContactos = true;
 
 require("componentes/header.php");
 require("views/contactos_view.php");

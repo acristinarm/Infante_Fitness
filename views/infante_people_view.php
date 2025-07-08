@@ -109,6 +109,30 @@ $destaques = getDestaquesPagina($pagina);
 
     </div>
 
+    <div class="row conteudo_simples d-none d-sm-block">
+
+        <div class="col">
+            <div class="linha_laranja m-auto"></div>
+        </div>
+
+        <div class="col bem_vindo">
+            <div>Recrutamento</div>
+        </div>
+    
+    </div>
+
+
+    <div class="row conteudo_simples d-block d-sm-none">
+
+        <div class="col">  
+            <div class="linha_laranja_mobile m-auto"></div>
+        </div>
+
+        <div class="col bem_vindo_mobile">
+            <div>Recrutamento</div>
+        </div>
+
+    </div>
 
 
     
