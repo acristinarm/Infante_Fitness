@@ -57,7 +57,7 @@ $banner = getBanner();
                                     <a class="nav-link px-0 <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Infante People</a>
                                 </li>
 <!--                                 <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "destaques" || $menu_atual == "destaque_especifico") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
+                                    <a class="nav-link px-0 <?= ($menu_atual == "nutricionistas" || $menu_atual == "nutricionistas_especifico") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
                                 </li>
  -->                                <li class="nav-item dropdown">
                                     <a class="nav-link px-0 <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_empreendimentos">

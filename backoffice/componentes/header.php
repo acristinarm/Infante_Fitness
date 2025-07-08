@@ -65,7 +65,7 @@ if(!verificarLogin()){
                                     <a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Coaches</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link <?= ($menu_atual == "destaques") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
+                                    <a class="nav-link <?= ($menu_atual == "nutricionistas") ? "active" : ""; ?>" href="nutricionistas.php">Nutricionistas</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php">Empreendimentos</a>

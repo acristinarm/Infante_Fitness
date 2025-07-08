@@ -337,8 +337,9 @@ a{text-decoration: none !important;}
 }
 
 .linha_laranja_mobile{
-    width: 47px;
+    width: 200px;
     height: 3px;
+    border-radius: 100%;
     background-color: aqua;
 }
 
@@ -740,8 +741,10 @@ textarea::placeholder{
     }
 
     .coaches{
-        width: 285px !important;
-        height: 208px !important;
+        width: 210px !important;
+        height: 210px !important;
+        border-radius: 100% !important;
+
     }
 
     .card-body{
@@ -751,10 +754,15 @@ textarea::placeholder{
     }
 
     .card-title{
-        font-size: 17px;
+        font-size: 20px;
         line-height: 17px;
         height: 34px;
     }
+
+    .card-subtitle{
+        margin-top: -15px !important;
+    }
+
 
     .card-text{
         font-size: 13px !important;
@@ -791,11 +799,15 @@ textarea::placeholder{
         font-size: 25px;
     }
 
+    .card-subtitle{
+        margin-top: -15px !important;
+    }
+
     .card-text{
         margin-top: 0px !important;
         font-size: 17px !important;
         font-weight: 400;
-        height: 150px !important;
+        height: auto !important;
     } 
 
     #coaches_destaques .card-text{
@@ -869,7 +881,7 @@ textarea::placeholder{
 
 @media (min-width: 993px){
     .card_coaches{
-        height: 726px !important;
+        height: 550px !important;
     }
     
     .card_coaches .text_coaches{
@@ -880,7 +892,7 @@ textarea::placeholder{
 
 @media (max-width: 992px){
     .card_coaches{
-        height: 534px !important;
+        height: 460px !important;
     }    
 
     .card_coaches .text_coaches{
@@ -890,10 +902,32 @@ textarea::placeholder{
 
 }
 
-.nutri_img{
-    width: 250px !important;
-    height: 250px;
-    border-radius: 100% !important;
+@media (min-width: 993px){
+
+    .nutri_img{
+        width: 250px !important;
+        height: 250px;
+        border-radius: 100% !important;
+    }
+
+    .card_nutris{
+        height: 550px !important;
+    }
+
+}
+
+@media (max-width: 992px){
+
+    .nutri_img{
+        width: 210px !important;
+        height: 210px !important;
+        border-radius: 100% !important;
+
+    }
+
+    .card_nutris{
+        height: 460px !important;
+    }
 }
 
 .paginacao a{

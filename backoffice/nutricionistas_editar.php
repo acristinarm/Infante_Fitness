@@ -1,11 +1,11 @@
 <?php 
 
-$menu_atual = "destaques";
+$menu_atual = "nutricionistas";
 
 require_once("../requisicoes.php");
 
 require("componentes/header.php");
-require("views/destaques_editar_view.php");
+require("views/nutricionistas_editar_view.php");
 require("componentes/footer.php");
 
 ?>

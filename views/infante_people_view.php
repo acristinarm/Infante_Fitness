@@ -12,7 +12,7 @@ if($form){
 }
 
 $people = getPeoplePagina($pagina);
-$destaques = getDestaquesPagina($pagina);
+$nutris = getNutrisPagina($pagina);
 
 
 ?>
@@ -91,16 +91,16 @@ $destaques = getDestaquesPagina($pagina);
 
     </div>
 
-    <div class="row d-flex flex-row justify-content-center">
+    <div class="row d-flex flex-row justify-content-center ">
 
-        <?php foreach($destaques as $d): ?>
+        <?php foreach($nutris as $n): ?>
             <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-                <div class="card" style="border:none;">
-                    <img class="nutri_img m-auto card-img-top" src="<?= $d["imagem"]; ?>" alt="<?= strip_tags($d["título"]); ?>">
+                <div class="card card_nutris" style="border:none;">
+                    <img class="nutri_img m-auto card-img-top" src="<?= $n["imagem"]; ?>" alt="<?= strip_tags($n["nome"]); ?>">
                     <div class="card-body">
-                        <div class="card-title text-center"><?= $d["título"]; ?></div>
+                        <div class="card-title text-center"><?= $n["nome"]; ?></div>
                         <div class="card-text text_noticias">
-                            <?= $d["texto"]; ?>
+                            <?= $n["formacao"]; ?>
                         </div>
                     </div>
                 </div>
