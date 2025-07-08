@@ -49,7 +49,7 @@ $destaques = getDestaquesPagina($pagina);
 
         <?php foreach($people as $p): ?>
             <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-                <div class="card noticias" style="border:none;">
+                <div class="card card_coaches" style="border:none;">
                     <img class="coaches m-auto card-img-top" 
                         src="<?= htmlspecialchars($p["imagem"]); ?>" 
                         alt="<?= strip_tags($p["nome"]); ?>">
@@ -57,7 +57,7 @@ $destaques = getDestaquesPagina($pagina);
                     <div class="card-body">
                         <div class="card-title text-center"><?= strip_tags($p["nome"]); ?></div>
                         <div class="card-subtitle mb-2 text-muted text-center"><?= strip_tags($p["subtitulo"]); ?></div>
-                        <div class="card-text text_noticias"><?= $p["formacao"]; ?></div>
+                        <div class="card-text text_coaches"><?= $p["formacao"]; ?></div>
                     </div>
                 </div>
             </div>

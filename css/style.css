@@ -737,7 +737,6 @@ textarea::placeholder{
 @media (max-width: 992px){
     .card{
         margin-bottom: 37px;
-        width: 286px;
     }
 
     .coaches{
@@ -746,14 +745,12 @@ textarea::placeholder{
     }
 
     .card-body{
-        width: 285px !important;
         color: var(--cor-darkblue);
         height: 176px;
         padding: 21px;    
     }
 
     .card-title{
-        width: 285px !important;
         font-size: 17px;
         line-height: 17px;
         height: 34px;
@@ -787,21 +784,17 @@ textarea::placeholder{
     }
 
     .card-body{
-        width: 350px !important;
         color: var(--cor-darkblue);
     }
 
     .card-title{
-        width: 350px !important;
         font-size: 25px;
-        height: 75px !important;
     }
 
     .card-text{
         margin-top: 0px !important;
         font-size: 17px !important;
         font-weight: 400;
-        width: 297px !important;
         height: 150px !important;
     } 
 
@@ -809,11 +802,11 @@ textarea::placeholder{
         margin-top: 0px !important;
         font-size: 17px !important;
         font-weight: 400;
-        width: 463px !important;
+        width: 100% !important;
     }
 
     #coaches_destaques .card-body{
-        width: 90% !important;
+        width: 100% !important;
     }
 
 }
@@ -841,11 +834,11 @@ textarea::placeholder{
         margin-top: 0px !important;
         font-size: 17px !important;
         font-weight: 400;
-        width: 90% !important;
+        width: 100% !important;
     }
 
     #coaches_destaques .card-body{
-        width: 90% !important;
+        width: 100% !important;
     }
 
     .botao_ver_mais_3{
@@ -875,22 +868,22 @@ textarea::placeholder{
 }
 
 @media (min-width: 993px){
-    .noticias{
+    .card_coaches{
         height: 726px !important;
     }
     
-    .noticias .text_noticias{
+    .card_coaches .text_coaches{
         padding-top: 16px !important;
         height: 244px;
     }
 }
 
 @media (max-width: 992px){
-    .noticias{
+    .card_coaches{
         height: 534px !important;
     }    
 
-    .noticias .text_noticias{
+    .card_coaches .text_coaches{
         margin-top: 28px !important;
         height: 192px;
     }
