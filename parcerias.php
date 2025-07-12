@@ -1,6 +1,6 @@
 <?php 
 
-$menu_atual = "centro_ferias";
+$menu_atual = "parcerias";
 
 require("requisicoes.php");
 
@@ -8,7 +8,7 @@ $showCarousel = false;
 $showContactos = true;
 
 require("componentes/header.php");
-require("views/centro_f_view.php");
+require("views/parcerias_view.php");
 require("componentes/footer.php");
 
 ?>

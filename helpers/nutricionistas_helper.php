@@ -5,7 +5,6 @@ function getNutris(){
     return $resultado;
 }
 
-
 function getNutrisPagina($pagina){
     $elementos_por_pagina = 6;
     $offset = ($pagina -1) * $elementos_por_pagina;

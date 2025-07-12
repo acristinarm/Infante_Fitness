@@ -1,6 +1,6 @@
 <?php 
 
-$centro_ferias = getCentroFerias();
+$centro_ferias = getParcerias();
 
 ?>
 

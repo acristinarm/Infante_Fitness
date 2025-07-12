@@ -29,6 +29,27 @@ $banner = getBanner();
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
+    <style>
+    #typing {
+        width: 100%;
+        font-family: monospace;
+        font-size: 2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid black; /* cursor */
+        box-sizing: border-box;
+    }
+
+    @keyframes blink-caret {
+        50% { border-color: transparent; }
+        100% { border-color: black; }
+    }
+
+    #typing {
+        animation: blink-caret 0.75s step-end infinite;
+    }
+    </style>
+
 </head>
 
 <body onload="scrollAutomatico('<?= $menu_atual; ?>')">
@@ -74,7 +95,7 @@ $banner = getBanner();
                                 </li>
 
 <!--                                 <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "centro_ferias") ? "active" : ""; ?>" href="centro_f.php">Centro de Férias</a> 
+                                    <a class="nav-link px-0 <?= ($menu_atual == "parcerias") ? "active" : ""; ?>" href="parcerias.php">Centro de Férias</a> 
                                 </li>
  -->                                <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a> 

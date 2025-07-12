@@ -1,11 +1,11 @@
 <?php 
 
-$menu_atual = "centro_ferias";
+$menu_atual = "parcerias";
 
 require_once("../requisicoes.php");
 
 require("componentes/header.php");
-require("views/centro_ferias_editar_view.php");
+require("views/parcerias_view.php");
 require("componentes/footer.php");
 
 ?>

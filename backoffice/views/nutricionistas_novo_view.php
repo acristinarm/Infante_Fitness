@@ -8,7 +8,7 @@ if($form){
     iduSQL("INSERT INTO nutricionistas (nome, formacao, imagem) VALUES ('$nome', '$formacao', '$imagem')");
     header("Location: nutricionistas.php");
 }
-
+ 
 ?>
 
 <main class="conatiner my-5 text-center">

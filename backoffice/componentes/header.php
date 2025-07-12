@@ -58,7 +58,7 @@ if(!verificarLogin()){
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="quem_somos.php">Quem Somos</a></li>
                                         <li><a class="dropdown-item" href="socios.php">Sócios</a></li>
-                                        <li><a class="dropdown-item" href="centro_ferias.php">Centro de Férias</a></li>
+                                        <li><a class="dropdown-item" href="parcerias.php">Parcerias</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">

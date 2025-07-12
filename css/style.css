@@ -379,8 +379,41 @@ a{text-decoration: none !important;}
     font-weight: 300;
 }
 
-.quem_somos_casas img{
-    width: 150px;
+
+.imagem-com-sobreposicao {
+  float: left;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.imagem-sobreposta {
+  float: left;
+  width: 250px;
+  height: auto;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transform: translate(-10px, 40px);
+  z-index: 2;
+}
+
+.imagem-fundo {
+  float: left;
+  width: 250px;
+  height: auto;
+  filter: brightness(0.95);
+  opacity: 0.9;
+  margin-left: -200px; /* sobrepõe à esquerda */
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.textos_main {
+    height: 450px;  /* mesma altura das imagens */
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--cor-darkblue);
+    font-weight: 400;
+
 }
 
 .textos{
@@ -391,15 +424,6 @@ a{text-decoration: none !important;}
     font-size: 16px;
 }
 
-.textos_main{
-    color: var(--cor-darkblue);
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.texto1{
-    margin-top: -25px;
-}
 
 .textos_main_mobile{
     color: var(--cor-darkblue);
@@ -413,6 +437,50 @@ a{text-decoration: none !important;}
     color: var(--cor-darkblue);
     font-size: 13px;
 }
+
+#typing{
+    background-color: var(--cor-darkblue);
+    color: lightgray;
+    height: 100px !important;
+    width: 100% !important;
+}
+
+
+.parcerias-section {
+  background-color: #f9f9f9; /* cor suave para destacar a seção */
+}
+
+.parceiros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.parceiro-logo {
+  max-width: 100px;
+  max-height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.parceiro-logo:hover {
+  filter: none;
+  transform: scale(1.1);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #222;
+}
+
 
 .conteudo_simples img{
     margin-bottom: 21px;
