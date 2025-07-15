@@ -33,154 +33,71 @@ $banner = getBanner();
 
 <body onload="scrollAutomatico('<?= $menu_atual; ?>')">
 
-    <header class="container-fluid">
-        <div class="row d-none d-sm-block">
-            <div class="col p-0 m-0">
-                <nav class="navbar_desktop navbar px-5 navbar-expand-lg ">
-                    <div class="container-fluid">
-                        <a class="navbar-brand"><img id="logo" src="uploads/logo_sem_fundo.png" alt="logo.png"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse d-flex justify-content-end align-items-end" id="navbarSupportedContent">
-                            <ul class="navbar-nav pt-4">
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "home") ? "active" : ""; ?>" aria-current="page" href="index.php">Home</a>
-                                </li>
-<!--                                 <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "quem_somos") ? "active" : ""; ?>" href="quem_somos.php">Quem Somos </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "socios") ? "active" : ""; ?>" href="socios.php">Sócios</a>
-                                </li>
- -->                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Infante People</a>
-                                </li>
-<!--                                 <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "nutricionistas" || $menu_atual == "nutricionistas_especifico") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
-                                </li>
- -->                                <li class="nav-item dropdown">
-<!--                                     <a class="nav-link px-0 <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_empreendimentos">
-                                        Serviços
-                                    </a>
-                                    <ul class="dropdown-menu" id="menu_desktop">
-                                        <?php foreach($empreendimentos as $i => $e): ?>
-                                            <li><a class="dropdown-item" href="empreendimentos.php?id=<?= $e["id"]; ?>"><?= $e["título"]; ?></a></li>
-                                            <?php if($i < count($empreendimentos) -1): ?>
-                                                <li><hr class="dropdown-divider"></li>
-                                            <?php endif; ?>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                </li>
- -->
+<header class="container-fluid">
 
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link px-0 dropdown-toggle <?= ($menu_atual == "servicos") ? "active" : ""; ?>" 
-                                    href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_servicos">
-                                        Serviços
-                                    </a>
-                                    <ul class="dropdown-menu" id="menu_desktop">
-                                        <li><a class="dropdown-item" href="preco.php">Preços</a></li>
-                                        <li><hr class="dropdown-divider"></li>
+    <!-- Menu Desktop -->
+    <div class="d-none d-sm-block">
+        <div class="container d-flex align-items-center justify-content-between py-3" id="desktop-menu">
+            <!-- Left menu -->
+            <nav class="d-flex">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "home") ? "active" : ""; ?>" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Infante People</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle <?= ($menu_atual == "servicos") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown">Serviços</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="preco.php">Preços</a></li>
+                            <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
+                            <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
 
-                                        <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
-                                        <li><hr class="dropdown-divider"></li>
+            <!-- Logo central -->
+            <div class="logo_container text-center">
+                <a href="index.php">
+                    <img src="uploads/logo_sem_fundo.png" alt="logo" class="logo" style="height: 60px;">
+                </a>
+            </div>
 
-                                        <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
-                                    </ul>
-                                </li>
+            <!-- Right menu -->
+            <nav class="d-flex">
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php">Empreendimentos</a></li>
+                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "centro_ferias") ? "active" : ""; ?>" href="centro_f.php">Centro de Férias</a></li>
+                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
-
-<!--                                 <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "parcerias") ? "active" : ""; ?>" href="parcerias.php">Centro de Férias</a> 
-                                </li>
- -->                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a> 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+    <!-- Menu Mobile -->
+    <div class="d-block d-sm-none mobile-nav">
+        <div class="container py-2">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.php">
+                    <img src="uploads/logo_sem_fundo.png" alt="logo" class="logo" style="height: 50px;">
+                </a>
+                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    ☰
+                </button>
+            </div>
+            <div class="collapse" id="mobileMenu">
+                <ul class="nav flex-column mt-2">
+                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "home") ? "active" : ""; ?>" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Infante People</a></li>
+                    <li class="nav-item"><a class="nav-link" href="preco.php">Preços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="horarios.php">Horários</a></li>
+                    <li class="nav-item"><a class="nav-link" href="inscricao.php">Inscrição</a></li>
+                    <li class="nav-item"><a class="nav-link" href="empreendimentos.php">Empreendimentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="centro_f.php">Centro de Férias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactos.php">Contactos</a></li>
+                </ul>
             </div>
         </div>
-
-        <div class="row d-block d-sm-none">
-            <div class="col p-0 m-0">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary px-0" id="navbar_mobile">
-                    <div class="container-fluid px-0">
-                        <a class="navbar-brand" href="#"><img id="logo" src="uploads/logo.png" alt="logo.png"></a>
-                        <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <script>
-                            document.addEventListener('DOMContentLoaded', function() {
-                                const navbarToggler = document.getElementById('navbar-toggler');
-                                const navbarIcon = navbarToggler.querySelector('.navbar-toggler-icon');
-
-                                navbarToggler.addEventListener('click', function() {
-                                        if (navbarToggler.getAttribute('aria-expanded') === 'true') {
-                                            navbarIcon.innerHTML = 'X'; // Muda para 'X'
-                                            navbarIcon.classList.remove('navbar-toggler-icon'); // Remove o icon original
-                                            navbarToggler.style.paddingLeft = '12px'; 
-                                        } else {
-                                            navbarIcon.innerHTML = ''; // Limpa o icon
-                                            navbarIcon.classList.add('navbar-toggler-icon'); // Adiciona o icon original
-                                            navbarToggler.style.paddingRight = '';
-                                        }
-                                });
-                            });
-                        </script> 
-                        <div class="collapse navbar-collapse-mobile" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "home") ? "active" : ""; ?>" aria-current="page" href="index.php">Home</a>
-                                </li>
-                                <li><div class="divider_mobile"></div></li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "quem_somos") ? "active" : ""; ?>" href="quem_somos.php">Quem Somos </a>
-                                </li>
-                                <li><div class="divider_mobile"></div></li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "socios") ? "active" : ""; ?>" href="socios.php">Sócios</a>
-                                </li>
-                                <li><div class="divider_mobile"></div></li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "noticias") ? "active" : ""; ?>" href="noticias.php">Notícias</a>
-                                </li>
-                                <li><div class="divider_mobile"></div></li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "destaques" || $menu_atual == "destaque_especifico") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
-                                </li>
-                                <li><div class="divider_mobile"></div></li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_empreendimentos">
-                                        Empreendimentos
-                                    </a>
-                                    <ul class="dropdown-menu" id="dropdown_mobile">
-
-                                        <?php foreach($empreendimentos as $e): ?>
-
-                                            <li><a class="dropdown-item" href="empreendimentos.php?id=<?= $e["id"]; ?> "><?= $e["título"]; ?></a></li>
-                                            <div class="dropdown-divider-mobile"></div>
-
-                                        <?php endforeach; ?>
-
-                                    </ul>
-                                </li>
-                                <li><div class="divider_mobile"></div></li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "centro_ferias") ? "active" : ""; ?>" href="centro_f.php">Centro de Férias</a> 
-                                </li>
-                                <li><div class="divider_mobile"></div></li>
-                                <li class="nav-item">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a> 
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
+    </div>
+</header>
 
 
         <?php if ($showCarousel): ?>
