@@ -29,27 +29,6 @@ $banner = getBanner();
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
-    <style>
-    #typing {
-        width: 100%;
-        font-family: monospace;
-        font-size: 2rem;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 2px solid black; /* cursor */
-        box-sizing: border-box;
-    }
-
-    @keyframes blink-caret {
-        50% { border-color: transparent; }
-        100% { border-color: black; }
-    }
-
-    #typing {
-        animation: blink-caret 0.75s step-end infinite;
-    }
-    </style>
-
 </head>
 
 <body onload="scrollAutomatico('<?= $menu_atual; ?>')">
@@ -81,7 +60,7 @@ $banner = getBanner();
                                     <a class="nav-link px-0 <?= ($menu_atual == "nutricionistas" || $menu_atual == "nutricionistas_especifico") ? "active" : ""; ?>" href="destaques.php">Destaques</a>
                                 </li>
  -->                                <li class="nav-item dropdown">
-                                    <a class="nav-link px-0 <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_empreendimentos">
+<!--                                     <a class="nav-link px-0 <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_empreendimentos">
                                         Serviços
                                     </a>
                                     <ul class="dropdown-menu" id="menu_desktop">
@@ -93,6 +72,24 @@ $banner = getBanner();
                                         <?php endforeach; ?>
                                     </ul>
                                 </li>
+ -->
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link px-0 dropdown-toggle <?= ($menu_atual == "servicos") ? "active" : ""; ?>" 
+                                    href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="link_servicos">
+                                        Serviços
+                                    </a>
+                                    <ul class="dropdown-menu" id="menu_desktop">
+                                        <li><a class="dropdown-item" href="preco.php">Preços</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+
+                                        <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+
+                                        <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
+                                    </ul>
+                                </li>
+
 
 <!--                                 <li class="nav-item">
                                     <a class="nav-link px-0 <?= ($menu_atual == "parcerias") ? "active" : ""; ?>" href="parcerias.php">Centro de Férias</a> 
@@ -259,7 +256,7 @@ $banner = getBanner();
 
                         <img src="<?=$banner[3]["imagem"]; ?>" alt="">
 
-                    <?php elseif ($menu_atual == "empreendimentos"): ?>
+                    <?php elseif ($menu_atual == "servicos"): ?>
 
                         <img src="<?=$banner[4]["imagem"]; ?>" alt="">
 

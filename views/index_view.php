@@ -21,7 +21,7 @@ $parcerias = getParceriasPagina($pagina);
 
 <main class="container"> 
 
-    <div class="row conteudo_simples d-none d-sm-block mb-4">
+    <div class="row conteudo_simples d-none d-md-block mb-4">
         <div class="col">
             <div class="linha_laranja m-auto"></div>
         </div>
@@ -45,7 +45,7 @@ $parcerias = getParceriasPagina($pagina);
 
     </div>
 
-    <div class="row conteudo_simples d-block d-sm-none mb-3">
+    <div class="row conteudo_simples d-block d-md-none mb-3">
 
         <div class="col">
             <div class="linha_laranja_mobile m-auto"></div>
@@ -57,31 +57,19 @@ $parcerias = getParceriasPagina($pagina);
 
         <div class="row conteudo_simples d-block d-md-none px-3">
             <div class="col-12">
-                <div class="d-flex justify-content-center quem_somos_casas"><img src="<?= $quem_somos["imagem"]; ?>" alt="predios"></div>
-                <div class="textos_main_mobile"><?= $quem_somos["texto"]; ?></div>    
+                <div class="imagem-com-sobreposicao">
+                    <img src="<?= $quem_somos_home["imagem"]; ?>" alt="Imagem principal" class="imagem-sobreposta_mobile">
+                    <img src="<?= $quem_somos_home["imagem"]; ?>" alt="Imagem de fundo" class="imagem-fundo_mobile">
+                </div>
+                <div class="textos_main_mobile mb-5">
+                    <?= $quem_somos_home["texto"]; ?>
+                </div>    
             </div>
         </div>
 
     </div>
 
-    <div id="typing"></div>
-
-    <script>
-        const text = "Making People Better Since 2021";
-        const typingElement = document.getElementById("typing");
-        let i = 0;
-
-        function type() {
-            if (i <= text.length) {
-            typingElement.textContent = text.substring(0, i);
-            i++;
-            setTimeout(type, 120); // velocidade da digitação
-            }
-        }
-        type();
-    </script>
-
-    <div class="row destaques d-none d-sm-block">
+    <div class="row destaques d-none d-sm-block ">
         <div class="col">
             <div class="linha_laranja m-auto"></div>
         </div>
@@ -120,13 +108,33 @@ $parcerias = getParceriasPagina($pagina);
 
     </div>
 
+    <div class="row destaques d-none d-sm-block ">
+        <div class="col">
+            <div class="linha_laranja m-auto"></div>
+        </div>
+
+        <div class="col titulo_destaques d-flex flex-row justify-content-center">
+            <p>Parceiros</p>
+        </div>
+    </div>
+
+    <div class="row destaques d-block d-sm-none">
+        <div class="col">
+            <div class="linha_laranja_mobile m-auto"></div>
+        </div>
+
+        <div class="col titulo_destaques_mobile d-flex flex-row justify-content-center">
+            <p>Parceiros</p>
+        </div>
+    </div>
+
+
     <section id="parcerias" class="parcerias-section py-5">
         <div class="container text-center">
-            <h2 class="mb-4">Nossas Parcerias</h2>
 
             <div class="parceiros-grid">
                 <?php foreach($parcerias as $p): ?>
-                    <a href="<?= htmlspecialchars($p['link']); ?>" 
+                    <a href="<?= htmlspecialchars(strip_tags($p['link'])); ?>" 
                     target="_blank" rel="noopener" class="parceiro-link">
                         <img src="<?= htmlspecialchars($p['logo']); ?>" 
                             alt="<?= strip_tags($p['nome']); ?>" 
@@ -134,7 +142,7 @@ $parcerias = getParceriasPagina($pagina);
                     </a>
                 <?php endforeach; ?>
             </div>
-            
+
         </div>
     </section>
 

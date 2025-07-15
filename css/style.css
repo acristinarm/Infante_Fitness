@@ -407,13 +407,38 @@ a{text-decoration: none !important;}
   z-index: 1;
 }
 
+.imagem-sobreposta_mobile {
+  float: left;
+  width: 120px;
+  height: auto;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  transform: translate(0px, 20px);
+  z-index: 2;
+}
+
+.imagem-fundo_mobile {
+  float: left;
+  width: 120px;
+  height: auto;
+  filter: brightness(0.95);
+  opacity: 0.9;
+  margin-left: -100px; /* sobrepõe à esquerda */
+  margin-top: 20px;
+  z-index: 1;
+}
+
 .textos_main {
-    height: 450px;  /* mesma altura das imagens */
     font-size: 18px;
     line-height: 1.5;
     color: var(--cor-darkblue);
     font-weight: 400;
 
+}
+
+@media (min-width: 991px){
+    .textos_main{
+        height: 500px;
+    }
 }
 
 .textos{
@@ -436,13 +461,6 @@ a{text-decoration: none !important;}
     margin-bottom: 34px;
     color: var(--cor-darkblue);
     font-size: 13px;
-}
-
-#typing{
-    background-color: var(--cor-darkblue);
-    color: lightgray;
-    height: 100px !important;
-    width: 100% !important;
 }
 
 

@@ -9,8 +9,6 @@ if($form){
 
 ?>
 
-<?php if(!empty($empreendimento_especifico)): ?>
-
 <main class="container"> 
 
     <div class="row conteudo_simples d-none d-sm-block">
@@ -19,7 +17,6 @@ if($form){
         </div>
 
         <div class="col bem_vindo">
-            <p>Empreendimentos</p>
             <div class="bem_vindo_subtitulo"><?= $empreendimento_especifico["título"]; ?></div>
         </div>
 
@@ -38,7 +35,6 @@ if($form){
         </div>
 
         <div class="col bem_vindo_mobile">
-            <div>Empreendimentos</div>
             <div class="bem_vindo_subtitulo_mobile"><?= $empreendimento_especifico["título"]; ?></div>
         </div>
 
@@ -66,22 +62,3 @@ if($form){
     </div>
 
 </main>
-
-<?php else: ?>
-
-<main class="container">
-
-    <div class="row conteudo_simples d-none d-sm-block">
-        <div class="col">
-            <div class="linha_laranja m-auto"></div>
-        </div>
-
-        <div class="col bem_vindo">
-            <p>Empreendimento Não Encontrado</p>
-        </div>
-    </div>
-
-</main>
-
-
-<?php endif; ?>

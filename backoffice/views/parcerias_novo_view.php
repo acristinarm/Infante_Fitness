@@ -1,6 +1,6 @@
 <?php 
 
-$form = isset($_GET["logo"]) && isset($_GET["link"]) && isset($_GET["imagem"]);
+$form = isset($_GET["logo"]) && isset($_GET["link"]) && isset($_GET["nome"]);
 if($form){
     $logo = $_GET["logo"];
     $link = $_GET["link"];

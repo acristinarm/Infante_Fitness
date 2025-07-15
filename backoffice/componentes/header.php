@@ -26,6 +26,17 @@ if(!verificarLogin()){
     <!-- JS TINYMCE (EDITOR TEXTO) -->
     <script src="https://cdn.tiny.cloud/1/cxcasgrsau34b9mwptjxh6nebdr2m9egf4d345kcbr2qk545/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
+    <script>
+        tinymce.init({
+            selector: 'textarea.link-field',
+            menubar: false,
+            toolbar: false,
+            forced_root_block: '', // Impede o <p>
+            force_br_newlines: false,
+            force_p_newlines: false,
+        });
+    </script>
+
 </head>
 
 <body>
@@ -52,7 +63,7 @@ if(!verificarLogin()){
                                     <a class="nav-link <?= ($menu_atual == "banners") ? "active" : ""; ?>" href="banners.php">Banners</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "quem_somos" || $menu_atual == "socios" || $menu_atual == "centro_ferias") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "quem_somos" || $menu_atual == "socios" || $menu_atual == "parcerias") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Menus Simples
                                     </a>
                                     <ul class="dropdown-menu">
@@ -61,6 +72,17 @@ if(!verificarLogin()){
                                         <li><a class="dropdown-item" href="parcerias.php">Parcerias</a></li>
                                     </ul>
                                 </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "quem_somos" || $menu_atual == "horarios" || $menu_atual == "centro_ferias") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Serviços
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="quem_somos.php">Quem Somos</a></li>
+                                        <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
+                                        <li><a class="dropdown-item" href="parcerias.php">Parcerias</a></li>
+                                    </ul>
+                                </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Coaches</a>
                                 </li>

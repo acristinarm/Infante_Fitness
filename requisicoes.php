@@ -11,5 +11,7 @@ require_once("helpers/empreendimentos_helper.php");
 require_once("helpers/infante_people_helper.php");
 require_once("helpers/quem_somos_helper.php"); 
 require_once("helpers/socios_helper.php");
+require_once("helpers/horarios_helper.php");
+
 
 ?>

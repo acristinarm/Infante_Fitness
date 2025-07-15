@@ -50,6 +50,7 @@ if($form){
 
                 <label for="link">link: </label><br>
                 <textarea name="link" id="link" cols="120" rows="15"><?= $parceria_especifica["link"]; ?></textarea>
+                
 
                 <br><br>
 
