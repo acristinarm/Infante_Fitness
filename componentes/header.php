@@ -31,78 +31,69 @@ $banner = getBanner();
 
 </head>
 
+
+
+
 <body onload="scrollAutomatico('<?= $menu_atual; ?>')">
 
-<header class="container-fluid">
+    <header id="mainHeader">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <a href="index.php" class="logo">
+            <img src="uploads/logo_branco.png" alt="Logo" style="height: 90px;">
+            </a>
 
-    <!-- Menu Desktop -->
-    <div class="d-none d-sm-block">
-        <div class="container d-flex align-items-center justify-content-between py-3" id="desktop-menu">
-            <!-- Left menu -->
-            <nav class="d-flex">
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "home") ? "active" : ""; ?>" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Infante People</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle <?= ($menu_atual == "servicos") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown">Serviços</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="preco.php">Preços</a></li>
-                            <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
-                            <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <!-- Menu Toggle Mobile -->
+            <button class="btn text-white d-sm-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+            ☰
+            </button>
 
-            <!-- Logo central -->
-            <div class="logo_container text-center">
-                <a href="index.php">
-                    <img src="uploads/logo_sem_fundo.png" alt="logo" class="logo" style="height: 60px;">
+            <!-- Menu Desktop -->
+            <nav class="nav-desktop d-none d-sm-flex">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="infante_people.php">Infante People</a></li>
+                
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Serviços
                 </a>
-            </div>
-
-            <!-- Right menu -->
-            <nav class="d-flex">
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php">Empreendimentos</a></li>
-                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "centro_ferias") ? "active" : ""; ?>" href="centro_f.php">Centro de Férias</a></li>
-                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a></li>
+                <ul class="dropdown-menu" aria-labelledby="dropdownServicos">
+                    <li><a class="dropdown-item" href="precos.php">Preços</a></li>
+                    <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
+                    <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
                 </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="contactos.php">Contactos</a></li>
+            </ul>
             </nav>
         </div>
-    </div>
 
-    <!-- Menu Mobile -->
-    <div class="d-block d-sm-none mobile-nav">
-        <div class="container py-2">
-            <div class="d-flex justify-content-between align-items-center">
-                <a href="index.php">
-                    <img src="uploads/logo_sem_fundo.png" alt="logo" class="logo" style="height: 50px;">
-                </a>
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
-                    ☰
-                </button>
-            </div>
-            <div class="collapse" id="mobileMenu">
-                <ul class="nav flex-column mt-2">
-                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "home") ? "active" : ""; ?>" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Infante People</a></li>
-                    <li class="nav-item"><a class="nav-link" href="preco.php">Preços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="horarios.php">Horários</a></li>
-                    <li class="nav-item"><a class="nav-link" href="inscricao.php">Inscrição</a></li>
-                    <li class="nav-item"><a class="nav-link" href="empreendimentos.php">Empreendimentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="centro_f.php">Centro de Férias</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contactos.php">Contactos</a></li>
-                </ul>
+        <!-- Menu Mobile (colapsável) -->
+        <div id="mobileMenu" class="d-sm-none collapse">
+        <ul class="nav flex-column text-center py-2">
+            <li class="nav-item"><a class="nav-link" href="infante_people.php">Infante People</a></li>
+            <li class="nav-item"><a class="nav-link" href="precos.php">Preços</a></li>
+            <li class="nav-item"><a class="nav-link" href="horarios.php">Horários</a></li>
+            <li class="nav-item"><a class="nav-link" href="inscricao.php">Inscrição</a></li>
+            <li class="nav-item"><a class="nav-link" href="contactos.php">Contactos</a></li>
+        </ul>
+        </div>
+    </header>
+
+
+        <div class="overlay-banner">
+            <div class="overlay-content text-center">
+                <h1 class="titulo-banner">O TUA BOX. A TUA MOTIVAÇÃO.</h1>
+                <p class="subtitulo-banner">Making People Better Since 2021!</p>
+                <a href="inscricao.php" class="btn-experimentar">QUERO EXPERIMENTAR</a>
             </div>
         </div>
-    </div>
-</header>
 
 
         <?php if ($showCarousel): ?>
             <!-- Carrossel -->
-            <div class="row d-none d-sm-block">
+            <div class="row d-none d-sm-block mx-0 position-relative">
                 <div class="col p-0">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -128,24 +119,28 @@ $banner = getBanner();
                 </div>
             </div>
 
-            <div class="row d-block d-sm-none">
+            <div class="row d-block d-sm-none mx-0 position-relative">
                 <div class="col p-0" id="carousel_mobile">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                            <?php foreach($carousel as $i => $c): ?>
+
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<?= $i; ?>" <?= ($i == 0) ? 'class="active" aria-current="true"' : ''; ?> aria-label="Slide <?= $i + 1; ?>"></button>
+
+                            <?php endforeach; ?>
                         </div>
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="uploads/BannerHome.png" class="d-block w-100" alt="BannerHome.png">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="uploads/BannerContactos_1.png" class="d-block w-100" alt="BannerContactos_1.png">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="uploads/BannerSocios.png" class="d-block w-100" alt="BannerSocios.png">
-                            </div>
+
+                            <?php foreach($carousel as $i => $c): ?>
+
+                                <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="3000">
+                                    <img src="<?= $c["imagem"]; ?>" class="d-block w-100" alt="...">
+                                </div>
+                                    
+                            <?php endforeach; ?>
+
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -154,7 +149,7 @@ $banner = getBanner();
         <?php else: ?>
         <!-- Imagens Fixas -->
 
-            <div class="row">
+            <div class="row position-relative">
                 <div class="col p-0 img_cabecalho">
 
                     <?php if($menu_atual == "quem_somos"):  ?>
@@ -193,5 +188,21 @@ $banner = getBanner();
         <?php endif; ?>
 
 
-    </header>
+<script>
+let lastScrollTop = 0;
+const header = document.getElementById("mainHeader");
 
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    // Scroll down
+    header.classList.add("hide-header");
+  } else {
+    // Scroll up
+    header.classList.remove("hide-header");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // evita valores negativos
+});
+</script>

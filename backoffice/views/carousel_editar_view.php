@@ -33,7 +33,7 @@ if($form){
 
                 <label for="imagem">Imagem: </label><br>
                 <input type="text" name="imagem" id="imagem" required style="width:500px;" value="<?= $carousel_especifico["imagem"]; ?>">
-                <a target="_blank" href="http://localhost/construcao_e_habitacao/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
+                <a target="_blank" href="http://localhost/infante_fitness/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
 
                 <br><br>
 
