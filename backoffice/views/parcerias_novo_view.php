@@ -33,7 +33,7 @@ if($form){
 
                 <label for="logo">Logo: </label><br>
                 <input type="text" name="logo" id="logo" required style="width:500px;"><br>
-                <a target="_blank" href="http://localhost/Infante_Fitness/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
+                <a target="_blank" href="http://localhost/infante_fitness/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
 
                 <br><br>
 

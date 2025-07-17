@@ -82,16 +82,16 @@ $banner = getBanner();
     </header>
 
 
-        <div class="overlay-banner">
-            <div class="overlay-content text-center">
-                <h1 class="titulo-banner">O TUA BOX. A TUA MOTIVAÇÃO.</h1>
-                <p class="subtitulo-banner">Making People Better Since 2021!</p>
-                <a href="inscricao.php" class="btn-experimentar">QUERO EXPERIMENTAR</a>
-            </div>
-        </div>
-
-
         <?php if ($showCarousel): ?>
+
+            <div class="overlay-banner">
+                <div class="overlay-content text-center">
+                    <h1 class="titulo-banner">O TUA BOX. A TUA MOTIVAÇÃO.</h1>
+                    <p class="subtitulo-banner">Making People Better Since 2021!</p>
+                    <a href="inscricao.php" class="btn-experimentar">QUERO EXPERIMENTAR</a>
+                </div>
+            </div>
+
             <!-- Carrossel -->
             <div class="row d-none d-sm-block mx-0 position-relative">
                 <div class="col p-0">
@@ -108,7 +108,7 @@ $banner = getBanner();
 
                             <?php foreach($carousel as $i => $c): ?>
 
-                                <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="3000">
+                                <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="2000">
                                     <img src="<?= $c["imagem"]; ?>" class="d-block w-100" alt="...">
                                 </div>
                                     
@@ -134,7 +134,7 @@ $banner = getBanner();
 
                             <?php foreach($carousel as $i => $c): ?>
 
-                                <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="3000">
+                                <div class="carousel-item <?= ($i == 0) ? "active" : ""; ?>" data-bs-interval="2000">
                                     <img src="<?= $c["imagem"]; ?>" class="d-block w-100" alt="...">
                                 </div>
                                     
@@ -149,7 +149,7 @@ $banner = getBanner();
         <?php else: ?>
         <!-- Imagens Fixas -->
 
-            <div class="row position-relative">
+            <div class="row position-relative m-0">
                 <div class="col p-0 img_cabecalho">
 
                     <?php if($menu_atual == "quem_somos"):  ?>

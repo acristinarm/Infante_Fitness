@@ -57,7 +57,15 @@ $nutris = getNutrisPagina($pagina);
                     <div class="card-body">
                         <div class="card-title text-center"><?= strip_tags($p["nome"]); ?></div>
                         <div class="card-subtitle mb-2 text-muted text-center"><?= strip_tags($p["subtitulo"]); ?></div>
-                        <div class="card-text text_coaches"><?= $p["formacao"]; ?></div>
+                        <div class="card-text text_coaches">
+                            <ul class="text-start">
+                                <?php foreach (explode("\n", strip_tags($p["formacao"])) as $paragrafo): ?>
+                                    <?php if (trim($paragrafo) !== ''): ?>
+                                        <li><?= trim($paragrafo); ?></li>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,7 +108,13 @@ $nutris = getNutrisPagina($pagina);
                     <div class="card-body">
                         <div class="card-title text-center"><?= $n["nome"]; ?></div>
                         <div class="card-text text_noticias">
-                            <?= $n["formacao"]; ?>
+                            <ul class="text-start">
+                                <?php foreach (explode("\n", strip_tags($n["formacao"])) as $paragrafo): ?>
+                                    <?php if (trim($paragrafo) !== ''): ?>
+                                        <li><?= trim($paragrafo); ?></li>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </ul>                      
                         </div>
                     </div>
                 </div>
@@ -133,6 +147,37 @@ $nutris = getNutrisPagina($pagina);
         </div>
 
     </div>
+
+    <div class="container my-5 p-4 recrutamento">
+        <h2 class="text-center mb-4">Envia-nos a tua Candidatura</h2>
+
+        <form action="enviar_candidatura.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" name="nome" id="nome" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" rows="5" class="form-control" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="cv" class="form-label">Anexar CV (PDF):</label>
+                <input type="file" name="cv" id="cv" accept=".pdf" class="form-control" required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn_candidatura px-4">Enviar Candidatura</button>
+            </div>
+        </form>
+    </div>
+
 
 
     

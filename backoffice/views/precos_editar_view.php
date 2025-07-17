@@ -3,15 +3,14 @@
 $form = isset($_GET["id"]);
 if($form){
     $id = $_GET["id"];
-    $nutri_especifico = getNutriEspecifico($id);
-    $form_2 = isset($_GET["imagem"]) && isset($_GET["nome"]) && isset($_GET["formacao"]);
+    $preco_especifico = getPrecoEspecifico($id);
+    $form_2 = isset($_GET["imagem"]) && isset($_GET["texto"]);
     if($form_2){
         $imagem = $_GET["imagem"];
-        $nome = $_GET["nome"];
-        $formacao = $_GET["formacao"];
+        $texto = $_GET["texto"];
     
-        iduSQL("UPDATE nutricionistas SET imagem='$imagem', nome='$nome', formacao='$formacao'  WHERE id = $id");
-        header("Location: nutricionistas.php");
+        iduSQL("UPDATE precos SET imagem='$imagem', texto='$texto'  WHERE id = $id");
+        header("Location: precos.php");
     }
 }
  
@@ -30,7 +29,7 @@ if($form){
 
         <div class="row m-0">
             <div class="col-12">
-                <h3>Nutricionista Editar</h3>
+                <h3>Preços Editar</h3>
             </div>
         </div>
 
@@ -39,20 +38,14 @@ if($form){
 
                 <input type="hidden" name="id" value="<?= $id; ?>">
 
-                <label for="nome">Nome: </label>
-                <textarea name="nome" id="nome" cols="120" rows="15"><?= $nutri_especifico["nome"]; ?></textarea>
-
-
-                <br><br> 
-
                 <label for="imagem">Imagem: </label>
-                <input type="text" name="imagem" id="imagem" required style="width:500px;" value="<?= $nutri_especifico["imagem"]; ?>">
+                <input type="text" name="imagem" id="imagem" required style="width:500px;" value="<?= $preco_especifico["imagem"]; ?>">
                 <a target="_blank" href="http://localhost/infante_fitness/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
 
                 <br><br>
 
-                <label for="formacao">Formação: </label><br>
-                <textarea name="formacao" id="formacao" cols="120" rows="15"><?= $nutri_especifico["formacao"]; ?></textarea>
+                <label for="texto">Texto: </label><br>
+                <textarea name="texto" id="texto" cols="120" rows="15"><?= $preco_especifico["texto"]; ?></textarea>
                 
                 <br><br>
 

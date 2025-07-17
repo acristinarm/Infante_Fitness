@@ -1,12 +1,11 @@
 <?php 
 
-$form = isset($_GET["nome"]) && isset($_GET["formacao"]) && isset($_GET["imagem"]);
+$form = isset($_GET["imagem"]) && isset($_GET["texto"]);
 if($form){
-    $nome = $_GET["nome"];
-    $formacao = $_GET["formacao"];
     $imagem = $_GET["imagem"];
-    iduSQL("INSERT INTO nutricionistas (nome, formacao, imagem) VALUES ('$nome', '$formacao', '$imagem')");
-    header("Location: nutricionistas.php");
+    $texto = $_GET["texto"];
+    iduSQL("INSERT INTO precos (imagem, texto) VALUES ('$imagem', '$texto')");
+    header("Location: precos.php");
 }
  
 ?>
@@ -24,17 +23,12 @@ if($form){
 
         <div class="row m-0">
             <div class="col-12">
-                <h3>Nutricionista Novo</h3>
+                <h3>Preço Novo</h3>
             </div>
         </div>
 
         <div class="row mx-0 mt-4">
             <form class="col-12">
-
-                <label for="nome">Nome: </label><br>
-                <input type="text" name="nome" id="nome" required style="width:500px;">
-
-                <br><br>
 
                 <label for="imagem">Imagem: </label><br>
                 <input type="text" name="imagem" id="imagem" required style="width:500px;"><br>
@@ -42,8 +36,8 @@ if($form){
 
                 <br><br>
 
-                <label for="formacao">Formação: </label><br>
-                <textarea name="formacao" id="formacao" cols="120" rows="15"></textarea>
+                <label for="texto">Texto: </label><br>
+                <textarea name="texto" id="texto" cols="120" rows="15"></textarea>
 
                 
                 <br><br>

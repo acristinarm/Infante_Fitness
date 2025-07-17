@@ -77,7 +77,7 @@ if(!verificarLogin()){
                                         Serviços
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="quem_somos.php">Quem Somos</a></li>
+                                        <li><a class="dropdown-item" href="precos.php">Preços</a></li>
                                         <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
                                         <li><a class="dropdown-item" href="parcerias.php">Parcerias</a></li>
                                     </ul>
