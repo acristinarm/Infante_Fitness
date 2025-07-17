@@ -52,7 +52,7 @@ if($form){
                     <input type="text" name="imagem_<?= $i; ?>" id="imagem_<?= $i; ?>" required style="width:500px;"
                         value="<?= $empreendimento_especifico["imagem_$i"]; ?>">
                     <a target="_blank"
-                        href="http://localhost/construcao_e_habitacao/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor
+                        href="http://localhost/infante_fitness/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor
                         de Ficheiros</a>
                     <br>
                 <?php endfor; ?>

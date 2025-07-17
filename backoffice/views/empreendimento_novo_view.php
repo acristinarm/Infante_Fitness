@@ -43,7 +43,7 @@ if($form){
 
                     <label for="imagem">Imagem <?= $i; ?>: </label><br>
                     <input type="text" name="imagem_<?= $i; ?>" id="imagem<?= $i; ?>" required style="width:500px;">
-                    <a target="_blank" href="http://localhost/construcao_e_habitacao/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
+                    <a target="_blank" href="http://localhost/infante_fitness/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
                     <br>
                 <?php endfor; ?>
 
