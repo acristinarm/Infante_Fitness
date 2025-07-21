@@ -4,9 +4,20 @@ $form = isset($_GET["imagem"]) && isset($_GET["texto"]);
 if($form){
     $imagem = $_GET["imagem"];
     $texto = $_GET["texto"];
+
+    // Tratamento da imagem para caminho relativo
+    $imagem = str_replace(['http://localhost/', 'https://seusite.com/'], '', $imagem);
+    $imagem = preg_replace('#^infante_fitness/#', '', $imagem);
+
+    if (!str_starts_with($imagem, 'uploads/')) {
+        $imagem = 'uploads/' . ltrim($imagem, '/');
+    }
+
     iduSQL("INSERT INTO precos (imagem, texto) VALUES ('$imagem', '$texto')");
     header("Location: precos.php");
+    exit;
 }
+
  
 ?>
 

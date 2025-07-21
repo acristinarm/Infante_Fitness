@@ -1,6 +1,15 @@
 <?php 
 
 $banner = getBanner();
+
+$host = $_SERVER['HTTP_HOST'];
+
+if (strpos($host, 'localhost') !== false) {
+    $baseURL = 'http://localhost/infante_fitness/';
+} else {
+    $baseURL = 'https://' . $host . '/';  
+}
+
 ?>
 
 <main class="conatiner my-5 text-center">
@@ -15,27 +24,25 @@ $banner = getBanner();
     <div class="col-12">
         <table>
             <tr>
-                <th>Id</th>
                 <th>Nome</th>
                 <th>Imagem</th>
                 <th>Ações</th>
             </tr>
 
-            <?php foreach($banner as $row): ?>
+            <?php foreach($banner as $row): 
+                $img_src = $baseURL . $row["imagem"]; // aqui corrigido para $baseURL
+            ?>
                 <tr>
-                    <td><?= $row["id"] ?></td>
-                    <td><?= $row["nome"]; ?></td>
+                    <td><?= htmlspecialchars($row["nome"]) ?></td>
                     <td>
-                        <img src="<?= $row["imagem"]; ?>" alt="<?= $row["imagem"]; ?>" width="200">
+                        <img src="<?= htmlspecialchars($img_src) ?>" alt="<?= htmlspecialchars($row["nome"]) ?>" width="200">
                     </td>
                     <td>
                         <a href="banners_editar.php?id=<?= $row["id"] ?>"><button>Editar</button></a>
-                        <br><br>
                     </td>
                 </tr>
             <?php endforeach; ?>
-
-        </table>
+        </table>    
     </div>
 </div>
 

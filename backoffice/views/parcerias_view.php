@@ -1,5 +1,13 @@
 <?php
 $parcerias = getParcerias();
+
+$host = $_SERVER['HTTP_HOST'];
+
+if (strpos($host, 'localhost') !== false) {
+    $baseURL = 'http://localhost/infante_fitness/';
+} else {
+    $baseURL = 'https://' . $host . '/';  
+}
 ?>
 
 <main class="container my-5 text-center">
@@ -13,6 +21,7 @@ $parcerias = getParcerias();
     <div class="row mx-0 mt-4">
         <div class="col-12">
             <a href="parcerias_novo.php"><button>Novo</button></a>
+            <br><br>
             <table>
                 <tr>
                     <th>Logo</th>
@@ -21,11 +30,12 @@ $parcerias = getParcerias();
                     <th>Ações</th>
                 </tr>
 
-                <?php foreach($parcerias as $p): ?>
-
+                <?php foreach($parcerias as $p): 
+                    $img_src = $baseURL . $p["logo"];
+                ?>
                     <tr>
                         <td>
-                            <img src="<?= $p["logo"]; ?>" alt="" width="200">
+                            <img src="<?= htmlspecialchars($img_src); ?>" alt="<?= htmlspecialchars($p["nome"]); ?>" width="200">
                         </td>
                         <td><?= $p["nome"]; ?></td>
                         <td><?= $p["link"]; ?></td>
@@ -35,8 +45,7 @@ $parcerias = getParcerias();
                             <a href="parcerias_apagar.php?id=<?= $p["id"]; ?>"><button>Apagar</button></a>
                         </td>
                     </tr>
-
-                <?php endforeach; ?>
+                <?php endforeach; ?> 
             </table>
         </div>
     </div>

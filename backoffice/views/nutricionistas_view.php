@@ -2,6 +2,14 @@
 
 $nutri = getNutris();
 
+$host = $_SERVER['HTTP_HOST'];
+
+if (strpos($host, 'localhost') !== false) {
+    $baseURL = 'http://localhost/infante_fitness/';
+} else {
+    $baseURL = 'https://' . $host . '/';  
+}
+
 ?>
 
 <main class="conatiner my-5 text-center">
@@ -15,19 +23,21 @@ $nutri = getNutris();
 <div class="row mx-0 mt-4"> 
     <div class="col-12">
         <a href="nutricionistas_novo.php"><button>Novo</button></a>
+        <br><br>
         <table> 
             <tr>
                 <th>Imagem</th>
                 <th>Nome</th>
                 <th>Formação</th>
                 <th>Ações</th>
-            </tr>
+            </tr>            
 
-            <?php foreach($nutri as $n): ?>
-
+            <?php foreach($nutri as $n): 
+                $img_src = $baseURL . $n["imagem"];
+            ?>
                 <tr>
                     <td>
-                        <img src="<?= $n["imagem"]; ?>" alt="" style="width:500px;">
+                        <img src="<?= htmlspecialchars($img_src); ?>" alt="" style="width:500px;">
                     </td>
                     <td><?= $n["nome"]; ?></td>
                     <td><?= substr($n["formacao"], 0, 200); ?> ... </td>
@@ -37,7 +47,6 @@ $nutri = getNutris();
                         <a href="nutricionistas_apagar.php?id=<?= $n["id"]; ?>"><button>Apagar</button></a>
                     </td>
                 </tr>
-
             <?php endforeach; ?>
         </table>
     </div>

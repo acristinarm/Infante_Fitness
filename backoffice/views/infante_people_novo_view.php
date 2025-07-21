@@ -1,23 +1,39 @@
-<?php 
-
-$form = isset($_GET["título"]) && isset($_GET["texto"]) && isset($_GET["imagem"]);
-if($form){
-    $titulo = $_GET["título"];
-    $texto = $_GET["texto"];
+<?php
+$form = isset($_GET["nome"]) && isset($_GET["subtitulo"]) && isset($_GET["formacao"]) && isset($_GET["imagem"]);
+if ($form) {
+    $nome = $_GET["nome"];
+    $subtitulo = $_GET["subtitulo"];
+    $formacao = $_GET["formacao"];
     $imagem = $_GET["imagem"];
-    iduSQL("INSERT INTO infante_people (título, texto, imagem) VALUES ('$titulo', '$texto', '$imagem')");
-    header("Location: infante_people.php");
-}
 
+    // Tratamento da imagem para caminho relativo
+    $imagem = str_replace(['http://localhost/', 'https://seusite.com/'], '', $imagem);
+    $imagem = preg_replace('#^infante_fitness/#', '', $imagem);
+
+    if (!str_starts_with($imagem, 'uploads/')) {
+        $imagem = 'uploads/' . ltrim($imagem, '/');
+    }
+
+    // Inserção na base de dados
+    iduSQL("INSERT INTO infante_people (nome, subtitulo, formacao, imagem)
+            VALUES ('$nome', '$subtitulo', '$formacao', '$imagem')");
+
+    // Redirecionar
+    header("Location: infante_people.php");
+    exit;
+}
 ?>
+
+
+
 
 <main class="conatiner my-5 text-center">
 
 
     <script>
-      tinymce.init({
-        selector: '#texto'
-      });
+        tinymce.init({
+        selector: '#formacao'
+        });
     </script> 
 
     <main class="conatiner my-5 text-center">

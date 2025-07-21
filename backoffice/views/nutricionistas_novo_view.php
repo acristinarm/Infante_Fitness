@@ -5,9 +5,20 @@ if($form){
     $nome = $_GET["nome"];
     $formacao = $_GET["formacao"];
     $imagem = $_GET["imagem"];
+
+    // Tratamento da imagem para caminho relativo
+    $imagem = str_replace(['http://localhost/', 'https://seusite.com/'], '', $imagem);
+    $imagem = preg_replace('#^infante_fitness/#', '', $imagem);
+
+    if (!str_starts_with($imagem, 'uploads/')) {
+        $imagem = 'uploads/' . ltrim($imagem, '/');
+    }
+
     iduSQL("INSERT INTO nutricionistas (nome, formacao, imagem) VALUES ('$nome', '$formacao', '$imagem')");
     header("Location: nutricionistas.php");
+    exit;
 }
+
  
 ?>
 

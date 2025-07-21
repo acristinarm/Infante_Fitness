@@ -2,6 +2,14 @@
 
 $horarios = getHorarios();
 
+$host = $_SERVER['HTTP_HOST'];
+
+if (strpos($host, 'localhost') !== false) {
+    $baseURL = 'http://localhost/infante_fitness/';
+} else {
+    $baseURL = 'https://' . $host . '/';  
+}
+
 ?>
 
 
@@ -22,12 +30,15 @@ $horarios = getHorarios();
                 <th>Ações</th>
             </tr>
             <tr>
-                <td><img src="<?= $horarios["imagem"]; ?>" alt="Horário" style="height: 60px;"></td>
+                <td>
+                    <img src="<?= htmlspecialchars($baseURL . $horarios["imagem"]); ?>" alt="Horário" style="height: 60px;">
+                </td>
                 <td><?= substr($horarios["texto"], 0, 80); ?> ... </td>
                 <td>
                     <a href="horarios_editar.php?id=<?= $horarios["id"]; ?>"><button>Editar</button></a>
                 </td>
-            </tr>
+            </tr>        
+
         </table>
     </div>
 </div>

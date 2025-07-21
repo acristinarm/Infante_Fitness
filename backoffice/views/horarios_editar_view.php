@@ -1,14 +1,27 @@
-<?php 
+<?php  
 
 $horarios = getHorarios();
 
 $form = isset($_GET["imagem"]) && isset($_GET["texto"]);
 if($form){
     $texto = $_GET["texto"];
-    $imagem = str_replace("C:/xampp/htdocs", "", $_GET["imagem"]);
+    $imagem = $_GET["imagem"];
+
+    // Tratamento da imagem para caminho relativo
+    $imagem = str_replace(['http://localhost/', 'https://seusite.com/'], '', $imagem);
+    $imagem = preg_replace('#^infante_fitness/#', '', $imagem);
+
+    if (!str_starts_with($imagem, 'uploads/')) {
+        $imagem = 'uploads/' . ltrim($imagem, '/');
+    }
+
     iduSQL("UPDATE horarios SET imagem='$imagem', texto='$texto'");
     header("Location: horarios.php");
+    exit;
 }
+
+?>
+
 
 ?>
 

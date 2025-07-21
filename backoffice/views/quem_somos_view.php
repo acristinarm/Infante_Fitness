@@ -2,6 +2,13 @@
 
 $quem_somos = getQuemSomos();
 
+$host = $_SERVER['HTTP_HOST'];
+
+if (strpos($host, 'localhost') !== false) {
+    $baseURL = 'http://localhost/infante_fitness/';
+} else {
+    $baseURL = 'https://' . $host . '/';  
+}
 ?>
 
 
@@ -9,7 +16,7 @@ $quem_somos = getQuemSomos();
 
 <div class="row m-0">
     <div class="col-12">
-        <h3>Quem Somos</h3>
+        <h3>Sobre Nós</h3>
     </div>
 </div>
 
@@ -23,13 +30,14 @@ $quem_somos = getQuemSomos();
             </tr>
             <tr>
                 <td>
-                    <img src="<?= $quem_somos["imagem"]; ?>" alt="<?= $quem_somos["imagem"]; ?>" width="200">
+                    <img src="<?= htmlspecialchars($baseURL . $quem_somos["imagem"]); ?>" alt="<?= htmlspecialchars($quem_somos["imagem"]); ?>" width="200">
                 </td>
                 <td><?= substr($quem_somos["texto"], 0, 80); ?> ... </td>
                 <td>
                     <a href="quem_somos_editar.php?id=<?= $quem_somos["id"]; ?>"><button>Editar</button></a>
                 </td>
             </tr>
+
         </table>
     </div>
 </div>

@@ -4,13 +4,26 @@ $form = isset($_GET["id"]);
 if($form){
     $id = $_GET["id"];
     $carousel_especifico = getCarouselEspecifico($id);
-    $form_2 = isset($_GET["imagem"]);
-    if($form_2){
+    if (isset($_GET["imagem"])) {
         $imagem = $_GET["imagem"];
+
+        // Remove domínio e caminho raiz
+        $imagem = str_replace(['http://localhost/', 'https://seusite.com/'], '', $imagem);
+        $imagem = preg_replace('#^infante_fitness/#', '', $imagem);
+
+        // Garante que comece com uploads/
+        if (!str_starts_with($imagem, 'uploads/')) {
+            $imagem = 'uploads/' . ltrim($imagem, '/');
+        }
 
         iduSQL("UPDATE carousel SET imagem='$imagem' WHERE id=$id");
         header("Location: carousel.php");
+        exit;
     }
+} else { 
+    // Se não tiver id, redireciona ou trata o erro
+    header("Location: carousel.php");
+    exit;
 }
 
 ?>

@@ -1,7 +1,6 @@
 <?php 
 
 $carousel = getCarousel();
-$empreendimentos = getEmpreendimentos();
 $banner = getBanner();
 
 ?>
@@ -155,33 +154,12 @@ $banner = getBanner();
             <div class="row position-relative m-0">
                 <div class="col p-0 img_cabecalho">
 
-                    <?php if($menu_atual == "quem_somos"):  ?>
-
-                        <img src="<?= $banner[0]["imagem"]; ?>" alt="">
-
-                    <?php elseif ($menu_atual == "socios"): ?>
-
-                        <img src="<?= $banner[1]["imagem"]; ?>" alt="">
-
-                    <?php elseif ($menu_atual == "infante_people"): ?>
-
-                        <img src="<?=$banner[2]["imagem"]; ?>" alt="">
-
-                    <?php elseif ($menu_atual == "destaques" || $menu_atual == "destaque_especifico"): ?>
-
-                        <img src="<?=$banner[3]["imagem"]; ?>" alt="">
-
+                    <?php if ($menu_atual == "infante_people"): ?>
+                        <img src="<?=$banner[0]["imagem"]; ?>" alt="">
                     <?php elseif ($menu_atual == "servicos"): ?>
-
-                        <img src="<?=$banner[4]["imagem"]; ?>" alt="">
-
-                    <?php elseif ($menu_atual == "centro_ferias"): ?>
-
-                        <img src="<?=$banner[5]["imagem"]; ?>" alt="">
-
+                        <img src="<?=$banner[1]["imagem"]; ?>" alt="">
                     <?php elseif ($menu_atual == "contactos"): ?>
-
-                        <img src="<?=$banner[6]["imagem"]; ?>" alt="">
+                        <img src="<?=$banner[2]["imagem"]; ?>" alt="">
 
                     <?php endif; ?>
 

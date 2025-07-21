@@ -7,10 +7,8 @@ require_once("helpers/carousel_helper.php");
 require_once("helpers/parcerias_helper.php");
 require_once("helpers/contactos_helper.php");
 require_once("helpers/nutricionistas_helper.php");
-require_once("helpers/empreendimentos_helper.php");
 require_once("helpers/infante_people_helper.php");
 require_once("helpers/quem_somos_helper.php"); 
-require_once("helpers/socios_helper.php");
 require_once("helpers/horarios_helper.php");
 require_once("helpers/precos_helper.php");
 

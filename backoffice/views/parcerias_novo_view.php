@@ -5,9 +5,20 @@ if($form){
     $logo = $_GET["logo"];
     $link = $_GET["link"];
     $nome = $_GET["nome"];
+
+    // Tratamento do logo para caminho relativo (igual ao exemplo do carousel)
+    $logo = str_replace(['http://localhost/', 'https://seusite.com/'], '', $logo);
+    $logo = preg_replace('#^infante_fitness/#', '', $logo);
+
+    if (!str_starts_with($logo, 'uploads/')) {
+        $logo = 'uploads/' . ltrim($logo, '/');
+    }
+
     iduSQL("INSERT INTO parcerias (logo, link, nome) VALUES ('$logo', '$link', '$nome')");
     header("Location: parcerias.php");
+    exit;
 }
+
 
 ?>
 

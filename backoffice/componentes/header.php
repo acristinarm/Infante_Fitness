@@ -45,7 +45,7 @@ if(!verificarLogin()){
 
         <div class="row">
             <div class="col-12 p-0">
-                <nav class="navbar navbar-expand-lg bg-info-subtle">
+                <nav class="navbar navbar-expand-lg ">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">BACKOFFICE</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,15 +62,11 @@ if(!verificarLogin()){
                                 <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "banners") ? "active" : ""; ?>" href="banners.php">Banners</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "quem_somos" || $menu_atual == "socios" || $menu_atual == "parcerias") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Menus Simples
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="quem_somos.php">Quem Somos</a></li>
-                                        <li><a class="dropdown-item" href="socios.php">Sócios</a></li>
-                                        <li><a class="dropdown-item" href="parcerias.php">Parcerias</a></li>
-                                    </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link <?= ($menu_atual == "parcerias") ? "active" : ""; ?>" href="parcerias.php">Parcerias</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <?= ($menu_atual == "quem_somos") ? "active" : ""; ?>" href="quem_somos.php">Sobre Nós</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle <?= ($menu_atual == "quem_somos" || $menu_atual == "horarios" || $menu_atual == "centro_ferias") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -79,7 +75,7 @@ if(!verificarLogin()){
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="precos.php">Preços</a></li>
                                         <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
-                                        <li><a class="dropdown-item" href="parcerias.php">Parcerias</a></li>
+                                        <li><a class="dropdown-item" href="parcerias.php">Inscrção</a></li>
                                     </ul>
                                 </li>
 
@@ -88,9 +84,6 @@ if(!verificarLogin()){
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "nutricionistas") ? "active" : ""; ?>" href="nutricionistas.php">Nutricionistas</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link <?= ($menu_atual == "empreendimentos") ? "active" : ""; ?>" href="empreendimentos.php">Empreendimentos</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a>

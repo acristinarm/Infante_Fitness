@@ -2,6 +2,13 @@
 
 $preco = getPreco();
 
+$host = $_SERVER['HTTP_HOST'];
+
+if (strpos($host, 'localhost') !== false) {
+    $baseURL = 'http://localhost/infante_fitness/';
+} else {
+    $baseURL = 'https://' . $host . '/';  
+}
 ?>
 
 <main class="conatiner my-5 text-center">
@@ -15,6 +22,7 @@ $preco = getPreco();
 <div class="row mx-0 mt-4"> 
     <div class="col-12">
         <a href="precos_novo.php"><button>Novo</button></a>
+        <br><br>
         <table> 
             <tr>
                 <th>Imagem</th>
@@ -22,11 +30,14 @@ $preco = getPreco();
                 <th>Ações</th>
             </tr>
 
-            <?php foreach($preco as $p): ?>
+
+            <?php foreach($preco as $p): 
+                $img_src = $baseURL . $p["imagem"];
+            ?>
 
                 <tr>
                     <td>
-                        <img src="<?= $p["imagem"]; ?>" alt="" style="width:500px;">
+                        <img src="<?= htmlspecialchars($img_src); ?>" alt="" style="width:500px;">
                     </td>
                     <td><?= substr($p["texto"], 0, 200); ?> ... </td>
                     <td>
