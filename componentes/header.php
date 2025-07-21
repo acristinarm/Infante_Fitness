@@ -51,6 +51,8 @@ $banner = getBanner();
             <!-- Menu Desktop -->
             <nav class="nav-desktop d-none d-sm-flex">
             <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+
                 <li class="nav-item"><a class="nav-link" href="infante_people.php">Infante People</a></li>
                 
                 <li class="nav-item dropdown">
@@ -72,6 +74,7 @@ $banner = getBanner();
         <!-- Menu Mobile (colapsável) -->
         <div id="mobileMenu" class="d-sm-none collapse">
         <ul class="nav flex-column text-center py-2">
+            <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="infante_people.php">Infante People</a></li>
             <li class="nav-item"><a class="nav-link" href="precos.php">Preços</a></li>
             <li class="nav-item"><a class="nav-link" href="horarios.php">Horários</a></li>
@@ -88,7 +91,7 @@ $banner = getBanner();
                 <div class="overlay-content text-center">
                     <h1 class="titulo-banner">O TUA BOX. A TUA MOTIVAÇÃO.</h1>
                     <p class="subtitulo-banner">Making People Better Since 2021!</p>
-                    <a href="inscricao.php" class="btn-experimentar">QUERO EXPERIMENTAR</a>
+                    <a href="inscricao.php#experimentar" class="btn-experimentar">QUERO EXPERIMENTAR</a>
                 </div>
             </div>
 

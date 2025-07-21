@@ -148,35 +148,45 @@ $nutris = getNutrisPagina($pagina);
 
     </div>
 
-    <div class="container my-5 p-4 recrutamento">
-        <h2 class="text-center mb-4">Envia-nos a tua Candidatura</h2>
+<section id="candidatura" class="py-5" style="background-color:rgba(1, 11, 21, 0.93); color: #fff;">
+    <div class="container">
+        <h2 class="text-center mb-3" style="font-size: 2.2rem; font-weight: bold; color: rgb(63, 205, 205);">
+            Envia-nos a tua Candidatura
+        </h2>
+        <p class="text-center mb-4" style="font-size: 1.1rem;">
+            Preenche os dados e envia o teu CV em PDF.
+        </p>
 
-        <form action="enviar_candidatura.php" method="POST" enctype="multipart/form-data">
+        <form action="enviar_candidatura.php" method="POST" enctype="multipart/form-data" class="mx-auto" style="max-width: 600px;">
             <div class="mb-3">
-                <label for="nome" class="form-label">Nome:</label>
-                <input type="text" name="nome" id="nome" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" name="email" id="email" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="mensagem" class="form-label">Mensagem:</label>
-                <textarea name="mensagem" id="mensagem" rows="5" class="form-control" required></textarea>
+                <input type="text" name="nome" id="nome" placeholder="Nome *" required
+                    class="form-control"
+                    style="border-radius: 0; border: none; background-color: #fff; padding: 1rem;" />
             </div>
 
             <div class="mb-3">
-                <label for="cv" class="form-label">Anexar CV (PDF):</label>
-                <input type="file" name="cv" id="cv" accept=".pdf" class="form-control" required>
+                <input type="email" name="email" id="email" placeholder="Email *" required
+                    class="form-control"
+                    style="border-radius: 0; border: none; background-color: #fff; padding: 1rem;" />
             </div>
 
-            <div class="text-center">
-                <button type="submit" class="btn btn_candidatura px-4">Enviar Candidatura</button>
+            <div class="mb-3">
+                <input type="file" name="cv" id="cv" accept=".pdf" required
+                    class="form-control"
+                    style="border-radius: 0; border: none; background-color: #fff; padding: 1rem;"/>
             </div>
+
+            <div class="text-center mb-3">
+                <small>Os campos assinalados com * são obrigatórios</small>
+            </div>
+
+            <button type="submit" class="btn w-100 mt-3"
+                style="background-color:rgb(63, 205, 205); color: #fff; font-weight: bold; padding: 1rem;">
+                Enviar Candidatura
+            </button>
         </form>
     </div>
+</section>
 
 
 

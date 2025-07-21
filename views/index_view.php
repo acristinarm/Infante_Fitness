@@ -108,7 +108,7 @@ $parcerias = getParceriasPagina($pagina);
 
     </div>
 
-    <div class="row destaques d-none d-sm-block ">
+    <div class="row destaques d-none d-sm-block parceiros_home">
         <div class="col">
             <div class="linha_laranja m-auto"></div>
         </div>
@@ -118,7 +118,7 @@ $parcerias = getParceriasPagina($pagina);
         </div>
     </div>
 
-    <div class="row destaques d-block d-sm-none">
+    <div class="row destaques d-block d-sm-none ">
         <div class="col">
             <div class="linha_laranja_mobile m-auto"></div>
         </div>

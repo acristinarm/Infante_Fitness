@@ -59,3 +59,5 @@ $preco = getPrecoPagina($pagina);
         <?php endforeach; ?>
 
     </div>
+
+</main>

@@ -18,12 +18,14 @@ $contactos = getContactos();
             <tr>
                 <th>Telefone</th>
                 <th>E-mail</th>
+                <th>Instagram</th>
                 <th>Morada</th>
                 <th>Ações</th>
             </tr>
             <tr>
                 <td><?= $contactos["telefone"]; ?></td>
                 <td><?= $contactos["email"]; ?></td>
+                <td><?= $contactos['link_instagram']; ?></td>
                 <td><?= $contactos["morada"]; ?></td>
                 <td>
                     <a href="contactos_editar.php?id=<?= $contactos["id"]; ?>"><button>Editar</button></a>

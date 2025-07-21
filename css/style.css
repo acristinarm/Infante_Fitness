@@ -8,7 +8,7 @@ body{
 
 
 :root{
-    --cor-darkblue: #1b1b1c;
+    --cor-darkblue: rgba(1, 11, 21, 0.93);
     --cor-branca: #FFFFFF;
     --cor-laranja: #F9963B;
 }
@@ -33,7 +33,7 @@ header#mainHeader {
   top: 0;
   width: 100%;
   height: 100px;
-  background-color: rgba(27, 27, 28, 0.8);
+  background-color: rgba(1, 11, 21, 0.85);
   z-index: 1000;
   transition: top 0.4s ease, opacity 0.4s ease;
   backdrop-filter: blur(8px); /* opcional: efeito de vidro */
@@ -499,6 +499,11 @@ header.hide-header {
   filter: none;
   transform: scale(1.1);
 }
+
+.parceiros_home{
+    margin-top: -120px !important;
+}
+
 
 
 h2 {
@@ -1024,16 +1029,6 @@ textarea::placeholder{
     }
 }
 
-.recrutamento{
-    background-color: rgb(231, 231, 231);
-    color: var(--cor-darkblue);
-}
-
-.btn_candidatura{
-    background-color: rgb(37, 238, 238) !important;
-    color: var(--cor-darkblue) !important;
-    border-radius: 0px !important;
-}
 
 .paginacao a{
     color: var(--cor-darkblue);
@@ -1115,6 +1110,10 @@ textarea::placeholder{
 
 }
 
+#experimentar{
+    margin-top: 100px;
+}
+
 
 
 /* --- FOOTER --- */
@@ -1147,36 +1146,20 @@ textarea::placeholder{
 
 
 #area_contactos img{
-    width: 75px;
-    height: 75px ;
-    margin-bottom: 47px;
+    width: 60px;
+    height: 60px ;
+    margin-bottom: 20px;
 }
 
 #area_contactos_mobile img{
-    width: 52px;
-    height: 52px ;
+    width: 35px;
+    height: 35px ;
 }
 
 .contactos img{
     margin-bottom: 19px;
     margin-top: 30px;
 }
-
-
-/* .sobrepor{
-    position: absolute;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    max-width: 1600px;
-} */
-
-/* #area_contactos .sobrepor{height: 565px;}
-
-#area_contactos_mobile .sobrepor{height: 573px;}
-
-#footer_facebook .sobrepor{height: 100%;}
-
-#footer_facebook_mobile .sobrepor{height: 100%;} */
 
 .conteudo {
     color: lightgray;
@@ -1234,7 +1217,7 @@ textarea::placeholder{
   }
 
   .contactos img{
-    margin-bottom: 14px;
+    margin-bottom: 5px;
     margin-top: 10px;
   }
 }

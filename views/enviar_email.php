@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'infante.fitness@gmail.com'; 
-        $mail->Password = 'A_TUA_APP_PASSWORD';         // App Password gerada no Gmail
+        $mail->Password = 'urbrdjzqofdptvvg';         // App Password gerada no Gmail
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
 

@@ -10,7 +10,7 @@ $contactos = getContactos();
 
     <div class="row p-1 m-0 d-none d-lg-block" id="area_contactos">
 
-        <div class="col pt-5 d-flex flex-row justify-content-center">
+        <div class="col pt-3 d-flex flex-row justify-content-center">
             <div class="conteudo text-center w-100">
 
                 <div class="d-flex flex-row justify-content-evenly contactos ps-4">
@@ -39,7 +39,7 @@ $contactos = getContactos();
 
                     <!-- Instagram -->
                     <div class="d-flex flex-column align-items-center mx-2">
-                        <a href="https://www.instagram.com/infante.fitness/" target="_blank">
+                        <a href="<?= $contactos['link_instagram']; ?>" target="_blank">
                             <img src="imagens/instagram.png" alt="Instagram" class="instagram_icon">
                             <div class="mt-2 instagram">Instagram</div>
                         </a>
@@ -55,9 +55,7 @@ $contactos = getContactos();
 
         <div class="d-flex justify-content-between align-items-center flex-wrap px-3 py-2">
             <div class="copyright">
-                <a href="https://anacrebelo.eu/" target="_blank">
                     Copyright &copy; <?= date("Y"); ?> Ana Rebelo. Todos os direitos reservados.
-                </a>
             </div>
 
             <div class="text-end d-flex flex-row gap-3 reclamacoes">
@@ -97,7 +95,7 @@ $contactos = getContactos();
 
                         <!-- Instagram -->
                         <div class="d-flex flex-column align-items-center">
-                            <a href="https://www.instagram.com/infante.fitness/" target="_blank">
+                            <a href="<?= $contactos['link_instagram']; ?>" target="_blank">
                                 <img src="imagens/instagram.png" alt="Instagram" class="instagram_icon">
                                 <div class="my-2 instagram">Instagram</div>
                             </a>
@@ -111,9 +109,7 @@ $contactos = getContactos();
         <div class="col-10 d-flex flex-row justify-content-between align-items-center m-auto text-center copyright_mobile">
             
             <div class="text-start">
-                <a href="https://anacrebelo.eu/" target="_blank">
                     Copyright &copy; <?= date("Y"); ?> Ana Rebelo. Todos os direitos reservados.
-                </a>
             </div>
 
             <div class="d-flex flex-row gap-3 text-end reclamacoes">
