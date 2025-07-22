@@ -1,6 +1,6 @@
 <?php 
 
-$horarios = getHorarios();
+$inscricao = getInscricao();
 
 ?>
 
@@ -18,7 +18,7 @@ $horarios = getHorarios();
 
     <div class="row mt-4 conteudo_simples d-none d-sm-block px-5">
         <div class="col-12">
-            <img src="<?= $horarios["imagem"]; ?>" alt="Horário" class="img-fluid img_horarios">
+            <img src="<?= $inscricao["imagem"]; ?>" alt="Inscrição" class="img-fluid img_horarios">
         </div>
     </div>  
 
@@ -34,7 +34,7 @@ $horarios = getHorarios();
 
     <div class="row conteudo_simples d-block d-sm-none px-3">
         <div class="col-12">
-            <img src="<?= $horarios["imagem"]; ?>" alt="Horário" class="img-fluid img_horarios_mobile">
+            <img src="<?= $inscricao["imagem"]; ?>" alt="Inscrição" class="img-fluid img_horarios_mobile">
         </div>
     </div>
 

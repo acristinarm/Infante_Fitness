@@ -89,26 +89,26 @@ $parcerias = getParceriasPagina($pagina);
         </div>
     </div>
 
-    <div class="row d-flex justify-content-center" id="coaches_destaques">
+    <div class="row d-flex justify-content-center" id="people_home">
 
         <?php foreach($people_home as $p): ?>
-            <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
-                <div class="card card_coaches" style="border:none;">
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card" style="border:none;">
                     <img class="coaches m-auto card-img-top" 
                         src="<?= htmlspecialchars($p["imagem"]); ?>" 
                         alt="<?= strip_tags($p["nome"]); ?>">
 
                     <div class="card-body">
                         <div class="card-title text-center"><?= strip_tags($p["nome"]); ?></div>
-                        <div class="card-subtitle mb-2 text-muted text-center"><?= substr(strip_tags($p["subtitulo"]), 0, 120) ?></div>
+                        <div class="card-subtitle text-muted text-center"><?= substr(strip_tags($p["subtitulo"]), 0, 120) ?></div>
                     </div>
                 </div>
-            </div>
+            </div> 
         <?php endforeach; ?>
 
     </div>
 
-    <div class="row destaques d-none d-sm-block parceiros_home">
+    <div class="row destaques d-none d-sm-block parceiros_home ">
         <div class="col">
             <div class="linha_laranja m-auto"></div>
         </div>

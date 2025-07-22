@@ -43,7 +43,7 @@ $horarios = getHorarios();
         <div class="col-12">
             <img src="<?= $horarios["imagem"]; ?>" alt="Horário" class="img-fluid img_horarios_mobile">
         </div>
-    </div>
+    </div> 
 
 
     <div class="row conteudo_simples d-block d-sm-none px-3">

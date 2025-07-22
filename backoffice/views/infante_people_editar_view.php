@@ -76,7 +76,7 @@ if($form){
             
             <br><br>
 
-            <input type="submit" value="Editar">
+            <input type="submit" value="Editar" class="button">
         </form>
     </div>
 </main>

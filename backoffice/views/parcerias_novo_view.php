@@ -58,7 +58,7 @@ if($form){
 
                 <br><br>
 
-                <input type="submit" value="Novo">
+                <input type="submit" value="Novo" class="button">
             </form>
         </div>
 

@@ -36,7 +36,7 @@ if (isset($_GET["imagem"])) {
 
             <br><br>
 
-            <input type="submit" value="Novo">
+            <input type="submit" value="Novo" class="button">
         </form>
     </div>
 

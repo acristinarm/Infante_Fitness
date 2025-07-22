@@ -1,9 +1,10 @@
-<?php 
+<?php  
 
-$form = isset($_GET["imagem"]) && isset($_GET["texto"]);
+$inscricao = getInscricao();
+
+$form = isset($_GET["imagem"]);
 if($form){
     $imagem = $_GET["imagem"];
-    $texto = $_GET["texto"];
 
     // Tratamento da imagem para caminho relativo
     $imagem = str_replace(['http://localhost/', 'https://seusite.com/'], '', $imagem);
@@ -13,16 +14,15 @@ if($form){
         $imagem = 'uploads/' . ltrim($imagem, '/');
     }
 
-    iduSQL("INSERT INTO precos (imagem, texto) VALUES ('$imagem', '$texto')");
-    header("Location: precos.php");
+    iduSQL("UPDATE inscricao SET imagem='$imagem'");
+    header("Location: inscricao.php");
     exit;
 }
 
- 
 ?>
 
-<main class="conatiner my-5 text-center">
 
+?>
 
     <script>
       tinymce.init({
@@ -34,28 +34,22 @@ if($form){
 
         <div class="row m-0">
             <div class="col-12">
-                <h3>Preço Novo</h3>
+                <h3>Inscrição</h3>
             </div>
         </div>
 
         <div class="row mx-0 mt-4">
+
             <form class="col-12">
 
-                <label for="imagem">Imagem: </label><br>
-                <input type="text" name="imagem" id="imagem" required style="width:500px;"><br>
+                <label for="imagem">Imagem: </label>
+                <input type="text" name="imagem" id="imagem" required style="width:500px;" value="<?= $inscricao["imagem"]; ?>">
                 <a target="_blank" href="http://localhost/infante_fitness/backoffice/tinyfilemanager/tinyfilemanager-master/tinyfilemanager.php?p=">Gestor de Ficheiros</a>
-
-                <br><br>
-
-                <label for="texto">Texto: </label><br>
-                <textarea name="texto" id="texto" cols="120" rows="15"></textarea>
-
                 
                 <br><br>
 
-                <input type="submit" value="Novo" class="button">
+                <input type="submit" value="Editar" class="button">
             </form>
         </div>
 
     </main>
-

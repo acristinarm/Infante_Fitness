@@ -59,7 +59,28 @@ tr:hover {
   transition: 0.3s ease-in-out;
 }
 
-button {
+/* Cor de fundo do menu dropdown */
+.dropdown-menu {
+  background-color: #1b1b1c !important;
+  border: 1px solid rgb(63, 205, 205);
+}
+
+/* Cor dos links dentro do dropdown */
+.dropdown-menu a {
+  color: #fff !important;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover nos itens */
+.dropdown-menu a:hover {
+  background-color: rgba(63, 205, 205, 0.2);
+  color: rgb(63, 205, 205) !important;
+}
+
+
+button,
+.button {
   background-color: lightgray; 
   color: #1b1b1c;
   border: none;
@@ -72,14 +93,17 @@ button {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
+button:hover,
+.button:hover {
   background-color: #1b1b1c;
   color: lightgray;
   transform: translateY(-2px);
 }
 
-button:active {
+button:active,
+.button:active {
   transform: scale(0.98);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 

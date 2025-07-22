@@ -69,13 +69,13 @@ if(!verificarLogin()){
                                     <a class="nav-link <?= ($menu_atual == "quem_somos") ? "active" : ""; ?>" href="quem_somos.php">Sobre Nós</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "quem_somos" || $menu_atual == "horarios" || $menu_atual == "centro_ferias") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "precos" || $menu_atual == "horarios" || $menu_atual == "inscricao") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Serviços
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="precos.php">Preços</a></li>
                                         <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
-                                        <li><a class="dropdown-item" href="parcerias.php">Inscrção</a></li>
+                                        <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
                                     </ul>
                                 </li>
 

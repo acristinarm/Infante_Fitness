@@ -114,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <p class="preenchimento_obrig">* Campos de preenchimento obrigatório</p>
 
-                        <button type="submit" class="botao botao_contactos_mobile">Enviar</button>
+                        <button type="submit" class="botao botao_contactos">Enviar</button>
                     </form>                
                 </div>
             </div>
@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="row conteudo_simples d-block d-md-none px-4">
         <div class="col">
             <div class="row d-flex flex-column">
-                <div class="col textos_contactos_mobile">
+                <div class="col textos_contactos_mobile mb-4">
                     <div class="w-100 text-center pb-3">
                         <p class="logo_infante_mobile">Infante</p>
                         <p class="logo_fitness_mobile">fitness</p>
@@ -181,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <p class="preenchimento_obrig_mobile">* Campos de preenchimento obrigatório</p>
 
-                        <button type="submit" class="botao botao_contactos_mobile">Enviar</button>
+                        <button type="submit" class="botao botao_contactos_mobile"><p>Enviar</p></button>
                     </form>
                 </div>
             </div>

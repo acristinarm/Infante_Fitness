@@ -31,7 +31,7 @@ if($form){
       });
     </script>
 
-    <main class="conatiner my-5 text-center">
+    <main class="container my-5 text-center">
 
         <div class="row m-0">
             <div class="col-12">
@@ -55,7 +55,7 @@ if($form){
                 
                 <br><br>
 
-                <input type="submit" value="Editar">
+                <input type="submit" value="Editar" class="button">
             </form>
         </div>
 
