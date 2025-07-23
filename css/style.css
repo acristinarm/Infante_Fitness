@@ -10,7 +10,6 @@ body{
 :root{
     --cor-darkblue: rgba(1, 11, 21, 0.93);
     --cor-branca: #FFFFFF;
-    --cor-laranja: #F9963B;
 }
 
 a{text-decoration: none !important;}
@@ -23,8 +22,8 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: rgba(27, 27, 28, 0.8); /* azul escuro #1b1b1c com transparência */
-  backdrop-filter: blur(5px); /* opcional para dar um efeito fosco */
+  background-color: rgba(27, 27, 28, 0.8); 
+  backdrop-filter: blur(5px); 
   transition: top 0.4s ease;
 }
 
@@ -187,7 +186,7 @@ header.hide-header {
 }
 
 .carousel-indicators button.active{
-    background-color: rgb(63, 205, 205);
+    background-color: rgb(55, 206, 221);
 }
 
 .carousel-indicators_mobile button{
@@ -197,7 +196,7 @@ header.hide-header {
 }
 
 .carousel-indicators_mobile button.active{
-    background-color: rgb(63, 205, 205);
+    background-color: rgb(55, 206, 221);
 }
 
 #carousel_mobile img{
@@ -295,7 +294,7 @@ header.hide-header {
 }
 
 .btn-experimentar {
-    background-color: rgb(63, 205, 205);
+    background-color: rgb(55, 206, 221);
     color: white;
     font-size: 20px !important;
     letter-spacing: 2px;
@@ -304,18 +303,21 @@ header.hide-header {
     font-weight: bold;
     display: inline-block;
     margin-top: 1rem;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra normal */
 }
 
 .btn-experimentar:hover {
-    background-color: aqua; 
+    background-color: rgb(55, 206, 221); 
     color: white;
     text-decoration: none;
+    transform: translateY(-4px); /* faz parecer que sobe */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* sombra mais forte por baixo */
 }
 
 .btn-experimentar:visited {
     color: white;
-    background-color: aqua;
+    background-color: rgb(55, 206, 221);
     text-decoration: none;
 }
 
@@ -339,14 +341,14 @@ header.hide-header {
     width: 350px;
     height: 3px;
     border-radius: 100%;
-    background-color: aqua;
+    background-color: rgb(55, 206, 221);
 }
 
 .linha_laranja_mobile{
     width: 200px;
     height: 3px;
     border-radius: 100%;
-    background-color: aqua;
+    background-color: rgb(55, 206, 221);
 }
 
 .bem_vindo{
@@ -560,12 +562,12 @@ header.hide-header {
 }
 
 .contactos_azul{
-    border-bottom: 2px solid aqua;
+    border-bottom: 2px solid rgb(55, 206, 221);
     height: 30px;
 }
 
 .contactos_azul_mobile{
-    border-bottom: 2px solid aqua;
+    border-bottom: 2px solid rgb(55, 206, 221);
     height: 20px;
     display: inline-block;
 }
@@ -693,7 +695,7 @@ textarea::placeholder{
 }
 
 .logo_fitness {
-    background-color: aqua;
+    background-color: rgb(55, 206, 221);
     color: var(--cor-darkblue) !important;
     height: 25px;
     line-height: 25px;
@@ -708,7 +710,7 @@ textarea::placeholder{
 }
 
 .logo_fitness_mobile {
-    background-color: aqua;
+    background-color: rgb(55, 206, 221);
     color: var(--cor-darkblue) !important;
     height: 20px;
     line-height: 20px;
@@ -1050,7 +1052,7 @@ textarea::placeholder{
 
 .linha_footer {
   height: 1px;
-  background-color:aqua; 
+  background-color:rgb(55, 206, 221); 
   border: none;  
 }
 

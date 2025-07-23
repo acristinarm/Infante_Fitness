@@ -4,7 +4,7 @@ $total_paginas = getTotalPaginasPeople();
 $pagina = 1;
 $pagina_atual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 
-$form = isset(($_GET["pagina"]));
+$form = isset($_GET["pagina"]);
 if($form){
     $pagina = intval($_GET["pagina"]);
     if($pagina < 1){$pagina = 1;}
