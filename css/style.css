@@ -976,6 +976,85 @@ textarea::placeholder{
 }
 
 
+.hyrox-frame {
+    position: relative;
+    padding: 5px;
+}
+
+.hyrox-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 5px solid rgb(55, 206, 221); 
+    border-radius: 0px;
+    transform: translate(30px, -15px); 
+    z-index: 0;
+}
+
+.hyrox-card {
+    position: relative;
+    background-color: var(--cor-darkblue);
+    color: white;
+    border-radius: 0px;
+    z-index: 1;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.hyrox-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(55, 206, 221);
+    margin: 0;
+}
+
+.hyrox-text {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.hyrox-spacer {
+    height: 20px;
+}
+
+.hyrox-card {
+    min-height: 250px !important; 
+}
+
+
+@media (max-width: 767.98px) {
+
+    .hyrox-card {
+        padding: 1.2rem;
+    }
+
+    .hyrox-title {
+        font-size: 1.6rem;
+    }
+
+    .hyrox-text {
+        font-size: 0.95rem;
+    }
+
+    .hyrox-frame::before {
+        transform: translate(15px, -10px);
+    }
+
+    .hyrox-spacer {
+        height: 12px;
+    }
+
+    .hyrox-frame{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+
+
 /* --- FOOTER --- */
 
 #area_contactos{
