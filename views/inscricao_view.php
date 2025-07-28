@@ -6,38 +6,52 @@ $inscricao = getInscricao();
 
 <main class="container"> 
 
-    <div class="row conteudo_simples d-none d-sm-block">
+    <section class="registo-section py-5">
+    <div class="container">
+        <div class="row align-items-center flex-column flex-md-row">
+
+            <!-- MOCKUP DO TELEMÓVEL À ESQUERDA -->
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <img src="<?= $inscricao['imagem']; ?>" alt="Imagem inscrição" class="img-inscricao">
+            </div>
+
+            <!-- IMAGEM DINÂMICA À DIREITA -->
+            <div class="col-md-6 text-center text-md-start">
+                <div class="contorno-texto">
+                    <h2 class="fw-bold mb-3">REGISTA-TE<br>NA APP REGYBOX</h2>
+                    <ul class="list-unstyled small-text mb-4">
+                        <li>• Marcação de aulas</li>
+                        <li>• Registo dos tempos/resultados WOD’s</li>
+                        <li>• Registo das cargas/PR</li>
+                        <li>• Gestão dos Treinos</li>
+                    </ul>
+                                
+                    <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-md-start mt-4">
+                        <a href="https://www.regibox.pt/regiprof_wod/registo/novo_registo.php?id_box=283&lang=pt&code=3602ca1de01dc9e1e9f9ca523d6b67f0" class="btn btn-outline-dark px-4 py-2">INSCREVER-ME</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <div class="row conteudo_simples d-none d-sm-block mt-5">
+
         <div class="col">
             <div class="linha_laranja m-auto"></div>
         </div>
-
-        <div class="col bem_vindo">
-            <div>Inscrição</div>
-        </div>
+    
     </div>
 
-    <div class="row mt-4 conteudo_simples d-none d-sm-block px-5">
-        <div class="col-12">
-            <img src="<?= $inscricao["imagem"]; ?>" alt="Inscrição" class="img-fluid img_horarios">
-        </div>
-    </div>  
 
-        <div class="row conteudo_simples d-block d-sm-none">
-        <div class="col">
+    <div class="row conteudo_simples d-block d-sm-none mt-5">
+
+        <div class="col">  
             <div class="linha_laranja_mobile m-auto"></div>
         </div>
-        <div class="col bem_vindo_mobile">
-            <div>Inscrição</div>
-        </div>
 
     </div>
-
-    <div class="row conteudo_simples d-block d-sm-none px-3">
-        <div class="col-12">
-            <img src="<?= $inscricao["imagem"]; ?>" alt="Inscrição" class="img-fluid img_horarios_mobile">
-        </div>
-    </div>
-
 
     <section id="experimentar" class="py-5" style="background-color:rgba(1, 11, 21, 0.93); color: #fff;">
         <div class="container">

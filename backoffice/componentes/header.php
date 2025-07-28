@@ -79,6 +79,18 @@ if(!verificarLogin()){
                                     </ul>
                                 </li>
 
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "if_hyrox" || $menu_atual == "if_daily" || $menu_atual == "if_team" || $menu_atual == "if_pt") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Workouts
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="if_hyrox.php">IF Hyrox</a></li>
+                                        <li><a class="dropdown-item" href="if_daily.php">IF Daily</a></li>
+                                        <li><a class="dropdown-item" href="if_team.php">IF Team</a></li>
+                                        <li><a class="dropdown-item" href="if_pt.php">IF Pt</a></li>                                       
+                                    </ul>
+                                </li>                               
+
                                 <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "infante_people") ? "active" : ""; ?>" href="infante_people.php">Coaches</a>
                                 </li>

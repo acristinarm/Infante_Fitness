@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <p class="preenchimento_obrig">* Campos de preenchimento obrigatório</p>
 
-                        <button type="submit" class="botao botao_contactos">Enviar</button>
+                        <button type="submit" class="btn btn-outline-dark px-4 py-2">Enviar</button>
                     </form>                
                 </div>
             </div>
@@ -180,7 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <p class="preenchimento_obrig_mobile">* Campos de preenchimento obrigatório</p>
 
-                        <button type="submit" class="botao botao_contactos_mobile"><p>Enviar</p></button>
+                        <button type="submit" class="btn btn-outline-dark enviar_mobile"><p>Enviar</p></button>
                     </form>
                 </div>
             </div>

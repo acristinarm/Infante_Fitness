@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+@font-face {
+    font-family: 'BlenderPro';
+    src: url('../fonts/BlenderPro-Bold.woff2') format('woff2'),
+         url('../fonts/BlenderPro-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
 
 body{
-    font-family: 'Bebas Neue', sans-serif !important;
+    font-family: 'BlenderPro', sans-serif !important;
     max-width: 1600px !important;
     min-width: 360px !important;
 }
@@ -488,9 +495,9 @@ header.hide-header {
 }
 
 .parceiro-logo{
-  width: 150px;
-  height: 80px;
-  object-fit: contain;
+  width: 150px !important;
+  height: 100px !important;
+  object-fit: cover;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: grayscale(100%);
   cursor: pointer;
@@ -500,6 +507,8 @@ header.hide-header {
   filter: none;
   transform: scale(1.1);
 }
+
+
 
 .conteudo_simples img{
     margin-bottom: 21px;
@@ -645,49 +654,6 @@ textarea::placeholder{
     color: var(--cor-darkblue);
     font-weight: 400;
 }
-
-.botao {
-  background-color: lightgray;
-  color: #1b1b1c;
-  border: none;
-  padding: 8px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-}
-
-.botao:hover {
-  background-color: #1b1b1c;
-  color: lightgray;
-  transform: translateY(-2px);
-}
-
-.botao:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.botao_contactos {
-  width: 171px !important;
-  height: 47px;
-}
-
-.botao_contactos_mobile {
-  width: 80px !important;
-  height: 30px;
-  padding: 7px 18px !important;
-}
-
-.botao_contactos_mobile p{
-    font-size: 12px !important;
-    letter-spacing: 2px !important;
-}
-
 
 .logo_infante {
     margin-bottom: 0;
@@ -982,6 +948,32 @@ textarea::placeholder{
     margin-top: 100px;
 }
 
+.img-inscricao{
+    width: 250px;
+    height: 500px;
+}
+
+@media (min-width: 992px) {
+  .contorno-texto h2 {
+    font-size: 3rem; /* título maior */
+  }
+
+  .contorno-texto .list-unstyled.small-text li {
+    font-size: 1.25rem; /* itens da lista maiores */
+  }
+
+  .contorno-texto .btn {
+    font-size: 1.25rem;   /* botão maior */
+    padding: 0.75rem 2rem; /* aumentar padding para ficar mais grande */
+  }
+}
+
+.contorno-texto {
+  border: 2px solid rgb(55, 206, 221); 
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(55, 206, 221, 0.3); 
+}
 
 
 /* --- FOOTER --- */
@@ -1107,4 +1099,8 @@ textarea::placeholder{
 
 .ctc-analytics:hover {
   transform: scale(1.1);
+}
+
+.enviar_mobile{
+    height: 40px !important;
 }

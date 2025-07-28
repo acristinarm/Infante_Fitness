@@ -1,0 +1,11 @@
+# Permitir acesso à pasta uploads
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /infante_fitness/
+
+    # Exceção para a pasta uploads
+    RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
+    RewriteRule ^ - [L]
+
+    # (outros rewrites que tenhas aqui)
+</IfModule>
