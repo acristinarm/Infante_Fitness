@@ -105,6 +105,17 @@ header.hide-header {
   background-color: transparent !important;
 }
 
+.nav-link {
+    color: white !important;
+}
+
+.nav-item.dropdown:hover > .nav-link,
+.nav-item.dropdown:focus > .nav-link,
+.nav-item.dropdown.show > .nav-link {
+    color: white !important;
+}
+
+
 
 .carousel-inner img{
     object-fit: cover;
