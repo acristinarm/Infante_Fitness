@@ -12,8 +12,19 @@ $banner = getBanner();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFANTE FITNESS</title>
     <link rel="icon" href="uploads/logo_sem_fundo.png" sizes="64x64" type="image/png">
+
+    <!-- Título que aparece no Google -->
+    <title>Infante Fitness | Treino, Hyrox, Crossfit e Bem-Estar</title>
+
+    <!-- Meta description (resumo que aparece por baixo do título no Google) -->
+    <meta name="description" content="Infante Fitness é uma box dedicada ao treino funcional, Hyrox, CrossFit e bem-estar físico. Junta-te a uma comunidade ativa e determinada!">
+
+    <!-- Palavras-chave (menos usado atualmente, mas não prejudica) -->
+    <meta name="keywords" content="Infante Fitness, CrossFit, Hyrox, Treino, Ginásio, Porto, Treino Funcional">
+
+    <!-- Robots (pede ao Google para indexar) -->
+    <meta name="robots" content="index, follow">
 
     
     <!-- CSS -->
