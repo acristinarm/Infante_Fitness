@@ -71,8 +71,8 @@ $banner = getBanner();
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownServicos">
                         <li><a class="dropdown-item" href="if_hyrox.php">IF Hyrox</a></li>
-                        <li><a class="dropdown-item" href="if_daily.php">Infante Daily</a></li>
-                        <li><a class="dropdown-item" href="if_pt.php">Infante PT</a></li>
+                        <li><a class="dropdown-item" href="if_daily.php">IF Daily</a></li>
+                        <li><a class="dropdown-item" href="if_pt.php">IF PT</a></li>
                         <li><a class="dropdown-item" href="playlists.php">Playlists</a></li>
                     </ul>
                 </li>
