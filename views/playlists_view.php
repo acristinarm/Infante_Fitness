@@ -29,16 +29,10 @@
 
     <div class="row d-flex flex-row justify-content-center ">
 
-        <iframe style="border-radius:12px" 
-                src="https://open.spotify.com/playlist/0FM0mAprBpjQkvNuyj9tmW?si=709e57654b444dc1" 
-                width="100%" 
-                height="352" 
-                frameBorder="0" 
-                allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-        </iframe>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0FM0mAprBpjQkvNuyj9tmW?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
     </div>
 
 </main>
+
+
