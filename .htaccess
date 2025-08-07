@@ -1,11 +1,13 @@
-# Permitir acesso à pasta uploads
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /infante_fitness/
+    RewriteBase /
 
-    # Exceção para a pasta uploads
+    # Permitir acesso direto à pasta uploads
     RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
     RewriteRule ^ - [L]
 
-    # (outros rewrites que tenhas aqui)
+    # Esconder extensões .php
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^([^/]+)$ $1.php [NC,L]
 </IfModule>
+

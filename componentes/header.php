@@ -49,7 +49,7 @@ $banner = getBanner();
     <header id="mainHeader">
         <div class="container d-flex justify-content-between align-items-center">
             <!-- Logo -->
-            <a href="index.php" class="logo">
+            <a href="/index" class="logo">
             <img src="uploads/logo_branco.png" alt="Logo" style="height: 90px;">
             </a>
 
@@ -61,19 +61,19 @@ $banner = getBanner();
             <!-- Menu Desktop -->
             <nav class="nav-desktop d-none d-sm-flex">
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="infante_people.php">Infante People</a></li>
+                <li class="nav-item"><a class="nav-link" href="/infante_people">Infante People</a></li>
                 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Workouts
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownServicos">
-                        <li><a class="dropdown-item" href="if_hyrox.php">IF Hyrox</a></li>
-                        <li><a class="dropdown-item" href="if_daily.php">IF Daily</a></li>
-                        <li><a class="dropdown-item" href="if_pt.php">IF PT</a></li>
-                        <li><a class="dropdown-item" href="playlists.php">Playlists</a></li>
+                        <li><a class="dropdown-item" href="/if_hyrox">IF Hyrox</a></li>
+                        <li><a class="dropdown-item" href="/if_daily">IF Daily</a></li>
+                        <li><a class="dropdown-item" href="/if_pt">IF PT</a></li>
+                        <li><a class="dropdown-item" href="/playlists">Playlists</a></li>
                     </ul>
                 </li>
 
@@ -82,13 +82,13 @@ $banner = getBanner();
                         Serviços
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownServicos">
-                        <li><a class="dropdown-item" href="precos.php">Preços</a></li>
-                        <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
-                        <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
+                        <li><a class="dropdown-item" href="/precos">Preços</a></li>
+                        <li><a class="dropdown-item" href="/horarios">Horários</a></li>
+                        <li><a class="dropdown-item" href="/inscricao">Inscrição</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item"><a class="nav-link" href="contactos.php">Contactos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contactos">Contactos</a></li>
             </ul>
             </nav>
         </div>
@@ -96,8 +96,8 @@ $banner = getBanner();
         <!-- Menu Mobile (colapsável) -->
         <div id="mobileMenu" class="d-sm-none collapse">
             <ul class="nav flex-column text-center py-2">
-                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="infante_people.php">Infante People</a></li>                
+                <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/infante_people">Infante People</a></li>                
                 <!-- Dropdown -->
 
                 <li class="nav-item dropdown">
@@ -105,10 +105,10 @@ $banner = getBanner();
                         Workouts
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="dropdownMobile">
-                        <li><a class="dropdown-item" href="if_hyrox.php">IF Hyrox</a></li>
-                        <li><a class="dropdown-item" href="if_daily.php">IF Daily</a></li>
-                        <li><a class="dropdown-item" href="if_pt.php">IF PT</a></li>
-                        <li><a class="dropdown-item" href="playlists.php">Playlists</a></li>
+                        <li><a class="dropdown-item" href="/if_hyrox">IF Hyrox</a></li>
+                        <li><a class="dropdown-item" href="/if_daily">IF Daily</a></li>
+                        <li><a class="dropdown-item" href="/if_pt">IF PT</a></li>
+                        <li><a class="dropdown-item" href="/playlists">Playlists</a></li>
                     </ul>
                 </li>
 
@@ -117,13 +117,13 @@ $banner = getBanner();
                         Serviços
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="dropdownMobile">
-                        <li><a class="dropdown-item" href="precos.php">Preços</a></li>
-                        <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
-                        <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
+                        <li><a class="dropdown-item" href="/precos">Preços</a></li>
+                        <li><a class="dropdown-item" href="/horarios">Horários</a></li>
+                        <li><a class="dropdown-item" href="/inscricao">Inscrição</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item"><a class="nav-link" href="contactos.php">Contactos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contactos">Contactos</a></li>
 
             </ul>
         </div>
