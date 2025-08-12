@@ -63,19 +63,7 @@ $banner = getBanner();
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="/infante_people">Infante People</a></li>
-                
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Workouts
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownServicos">
-                        <li><a class="dropdown-item" href="/if_hyrox">IF Hyrox</a></li>
-                        <li><a class="dropdown-item" href="/if_daily">IF Daily</a></li>
-                        <li><a class="dropdown-item" href="/if_pt">IF PT</a></li>
-                        <li><a class="dropdown-item" href="/playlists">Playlists</a></li>
-                    </ul>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/infante_people.php">Infante People</a></li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownServicos" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -88,7 +76,7 @@ $banner = getBanner();
                     </ul>
                 </li>
 
-                <li class="nav-item"><a class="nav-link" href="/contactos">Contactos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/contactos.php">Contactos</a></li>
             </ul>
             </nav>
         </div>
@@ -99,18 +87,6 @@ $banner = getBanner();
                 <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="/infante_people">Infante People</a></li>                
                 <!-- Dropdown -->
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Workouts
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="dropdownMobile">
-                        <li><a class="dropdown-item" href="/if_hyrox">IF Hyrox</a></li>
-                        <li><a class="dropdown-item" href="/if_daily">IF Daily</a></li>
-                        <li><a class="dropdown-item" href="/if_pt">IF PT</a></li>
-                        <li><a class="dropdown-item" href="/playlists">Playlists</a></li>
-                    </ul>
-                </li>
 
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -208,9 +184,6 @@ $banner = getBanner();
                     <?php elseif ($menu_atual == "contactos"): ?>
                         <img src="<?=$banner[2]["imagem"]; ?>" alt="">
                     <?php elseif ($menu_atual == "workouts"): ?>
-                        <img src="<?=$banner[3]["imagem"]; ?>" alt="">
-                    <?php elseif ($menu_atual == "playlists"): ?>
-                        <img src="<?=$banner[4]["imagem"]; ?>" alt="">
                     <?php endif; ?>
 
                 </div>

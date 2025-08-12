@@ -1,7 +1,7 @@
 <?php 
 
-$conexao = new PDO("mysql:host=localhost;dbname=u351966643_inFitness;charset=utf8mb4", "u351966643_pedro", "Infante_Fitness_2021");
-// $conexao = new PDO("mysql:host=localhost;dbname=infante_fitness_bd;charset=utf8mb4", "root", "");
+//$conexao = new PDO("mysql:host=localhost;dbname=u351966643_inFitness;charset=utf8mb4", "u351966643_pedro", "Infante_Fitness_2021");
+$conexao = new PDO("mysql:host=localhost;dbname=infante_fitness_bd;charset=utf8mb4", "root", "");
 
 function selectSQL($sql){
     global $conexao;

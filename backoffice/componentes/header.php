@@ -63,6 +63,9 @@ if(!verificarLogin()){
                                     <a class="nav-link <?= ($menu_atual == "banners") ? "active" : ""; ?>" href="banners.php">Banners</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link <?= ($menu_atual == "servicos_home") ? "active" : ""; ?>" href="servicos_home.php">Serviços Home</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "parcerias") ? "active" : ""; ?>" href="parcerias.php">Parcerias</a>
                                 </li>
                                 <li class="nav-item">
@@ -76,18 +79,6 @@ if(!verificarLogin()){
                                         <li><a class="dropdown-item" href="precos.php">Preços</a></li>
                                         <li><a class="dropdown-item" href="horarios.php">Horários</a></li>
                                         <li><a class="dropdown-item" href="inscricao.php">Inscrição</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle <?= ($menu_atual == "if_hyrox" || $menu_atual == "if_daily" || $menu_atual == "if_team" || $menu_atual == "if_pt") ? "active" : ""; ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Workouts
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="if_hyrox.php">IF Hyrox</a></li>
-                                        <li><a class="dropdown-item" href="if_daily.php">IF Daily</a></li>
-                                        <li><a class="dropdown-item" href="if_team.php">IF Team</a></li>
-                                        <li><a class="dropdown-item" href="if_pt.php">IF Pt</a></li>                                       
                                     </ul>
                                 </li>                               
 

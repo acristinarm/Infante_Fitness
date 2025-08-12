@@ -28,11 +28,12 @@ if (strpos($host, 'localhost') !== false) {
             <tr>
                 <th>Imagem</th>
                 <th>Nome</th>
+                <th>Mostrar na Home</th>
                 <th>Formação</th>
                 <th>Ações</th>
             </tr>            
 
-            <?php foreach($nutri as $n): 
+            <?php foreach($nutri as $n):  
                 $img_src = $baseURL . $n["imagem"];
             ?>
                 <tr>
@@ -40,6 +41,13 @@ if (strpos($host, 'localhost') !== false) {
                         <img src="<?= htmlspecialchars($img_src); ?>" alt="" style="width:500px;">
                     </td>
                     <td><?= $n["nome"]; ?></td>
+                    <td>
+                        <?php if ($n["mostrar_home"] == 1){
+                            $n["mostrar_home"] = "SIM";
+                        } else { $p["mostrar_home"] = "NÃO";}
+                        ?>
+                        <?= $n["mostrar_home"]; ?>
+                    </td>
                     <td><?= substr($n["formacao"], 0, 200); ?> ... </td>
                     <td>
                         <a href="nutricionistas_editar.php?id=<?= $n["id"]; ?>"><button>Editar</button></a>

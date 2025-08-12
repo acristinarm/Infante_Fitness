@@ -12,6 +12,11 @@ function getNutrisPagina($pagina){
     return $resultado;
 }
 
+function getNutriHome(){
+    $resultado = selectSQL("SELECT * FROM nutricionistas WHERE mostrar_home=1");
+    return $resultado;
+}
+
 function getTotalPaginas(){
     $elementos_por_pagina = 6;
     $resultado = selectSQLUnico("SELECT Count(*) FROM nutricionistas");

@@ -127,6 +127,16 @@ $contactos = getContactos();
 
 <?php endif; ?>
 
+
+<!-- Spotify floating button -->
+    <a href="https://open.spotify.com/playlist/0FM0mAprBpjQkvNuyj9tmW"
+       target="_blank" rel="noopener noreferrer"
+       class="spotify-float" aria-label="Abrir Spotify">
+      <img src="uploads/spotify.png" alt="Spotify">
+    </a>
+
+
+
 <!-- Botão flutuante do WhatsApp -->
     <div class="ctc-analytics ht_ctc_padding" style="background-color: #25D366; padding: 14px; border-radius: 50%; box-shadow: 0px 0px 11px rgba(0,0,0,.5); position: fixed; bottom: 20px; right: 20px; z-index: 9999; cursor: pointer;">
         <a href="https://wa.me/351911056935" target="_blank" style="display:block;">

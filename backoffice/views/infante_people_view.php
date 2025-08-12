@@ -1,7 +1,7 @@
 <?php 
 
 $people = getIPeople();
-
+ 
 $host = $_SERVER['HTTP_HOST'];
 
 if (strpos($host, 'localhost') !== false) {

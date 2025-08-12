@@ -1,6 +1,7 @@
 <?php 
 
 $people_home = getPeopleHome();
+$nutris_home = getNutriHome();
 $quem_somos_home = getQuemSomos();
 
 $total_paginas = getTotalPaginasParcerias();
@@ -15,6 +16,7 @@ if($form){
 }
 
 $parcerias = getParceriasPagina($pagina);
+$servicos = getServicoPagina($pagina);
 
 
 ?>
@@ -75,7 +77,7 @@ $parcerias = getParceriasPagina($pagina);
         </div>
 
         <div class="col titulo_destaques d-flex flex-row justify-content-center">
-            <p>As Caras da Box</p>
+            <p>Staff</p>
         </div>
     </div>
 
@@ -85,7 +87,7 @@ $parcerias = getParceriasPagina($pagina);
         </div>
 
         <div class="col titulo_destaques_mobile d-flex flex-row justify-content-center">
-            <p>As Caras da Box</p>
+            <p>Staff</p>
         </div>
     </div>
 
@@ -106,7 +108,70 @@ $parcerias = getParceriasPagina($pagina);
             </div> 
         <?php endforeach; ?>
 
+        <?php foreach($nutris_home as $n): ?>
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center">
+                <div class="card" style="border:none;">
+                    <img class="coaches m-auto card-img-top" 
+                        src="<?= htmlspecialchars($n["imagem"]); ?>" 
+                        alt="<?= strip_tags($n["nome"]); ?>">
+
+                    <div class="card-body">
+                        <div class="card-title text-center"><?= strip_tags($n["nome"]); ?></div>
+                    </div>
+                </div>
+            </div> 
+        <?php endforeach; ?>
+
+
     </div>
+
+    <div class="row destaques d-none d-sm-block ">
+        <div class="col">
+            <div class="linha_laranja m-auto"></div>
+        </div>
+
+        <div class="col titulo_destaques d-flex flex-row justify-content-center">
+            <p>Serviços</p>
+        </div>
+    </div>
+
+    <div class="row destaques d-block d-sm-none">
+        <div class="col">
+            <div class="linha_laranja_mobile m-auto"></div>
+        </div>
+
+        <div class="col titulo_destaques_mobile d-flex flex-row justify-content-center">
+            <p>Serviços</p>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center" id="servicos_home">
+
+        <?php foreach($servicos as $s): ?>
+            <div class="col-md-6 col-lg-4 d-flex justify-content-center mb-4">
+                <div class="card card_servicos shadow-lg border-0 img-wrapper">
+                    <img class="card-img-top mx-auto img-fluid" 
+                        src="<?= htmlspecialchars($s["imagem"]); ?>" 
+                        alt="<?= htmlspecialchars($s["nome"]); ?>"
+                    >
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3"><?= strip_tags($s["nome"]); ?></h5>
+                        <div class="card-text text_servicos">
+                            <?php foreach (explode("\n", strip_tags($s["texto"])) as $paragrafo): ?>
+                                <?php if (trim($paragrafo) !== ''): ?>
+                                    <p><?= trim($paragrafo); ?></p>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
+    </div>
+
+
 
     <div class="row destaques d-none d-sm-block parceiros_home ">
         <div class="col">

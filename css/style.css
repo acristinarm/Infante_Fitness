@@ -1064,6 +1064,48 @@ textarea::placeholder{
     }
 }
 
+#servicos_home .card_servicos {
+    background-color: transparent !important;  
+    box-shadow: none !important;               
+    border: none !important;                    
+    box-sizing: content-box;                    
+}
+
+#servicos_home .card-img-top {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid rgb(55, 206, 221);
+    box-shadow: 0 4px 15px rgba(55, 206, 221, 0.6);
+    margin: 0 auto;
+    display: block;
+}
+
+
+#servicos_home .card-title {
+    color: var(--cor-darkblue);
+    font-weight: 600;
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+}
+
+#servicos_home .card-text p {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+}
+
+#servicos_home .card-body {
+    padding: 0.75rem 0;                         
+}
+
+#servicos_home .card-text.text_servicos {
+    max-width: 280px;  /* ou outro valor que aches adequado */
+    margin: 0 auto;    /* centraliza o texto dentro do card */
+    text-align: center; /* mantém o texto centrado */
+}
+
 
 
 /* --- FOOTER --- */
@@ -1193,4 +1235,69 @@ textarea::placeholder{
 
 .enviar_mobile{
     height: 40px !important;
+}
+
+.spotify-float{
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 100px !important; /* aumenta a distância do fundo */
+  z-index: 99999 !important;
+  width: 68px !important;
+  height: 68px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 9999;
+  transition: transform .18s ease, box-shadow .18s ease;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  background: transparent; /* já vem do SVG */
+}
+
+/* Hover / focus */
+.spotify-float:hover,
+.spotify-float:focus{
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.30);
+  outline: none;
+}
+
+/* Opção: efeito "pulse" discreto */
+.spotify-float.pulse::after{
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 0 rgba(29,185,84,0.35);
+  animation: pulse 2.6s infinite;
+  pointer-events: none;
+}
+@keyframes pulse{
+  0%   { transform: scale(1); opacity: 1; }
+  70%  { transform: scale(1.8); opacity: 0; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+/* Responsividade: esconder em ecrãs muito pequenos (opcional) */
+@media (max-width: 360px){
+  .spotify-float { right: 12px; bottom: 12px; width:48px; height:48px; }
+  .spotify-float svg { width:24px; height:24px; }
+}
+
+.spotify-float svg {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.spotify-float img {
+  width: 100%;       /* ocupa 60% do botão */
+  height: auto;     /* mantém proporção */
+  display: block;   /* remove espaço extra */
+  border-radius: 100%;
 }

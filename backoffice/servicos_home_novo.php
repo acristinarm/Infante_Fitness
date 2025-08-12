@@ -1,11 +1,11 @@
 <?php 
 
-$menu_atual = "if_hyrox";
+$menu_atual = "servicos_home";
 
 require_once("../requisicoes.php");
 
 require("componentes/header.php");
-require("views/if_hyrox_view.php");
+require("views/servicos_home_novo_view.php");
 require("componentes/footer.php");
 
 ?>
