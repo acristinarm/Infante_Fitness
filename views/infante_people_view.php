@@ -157,7 +157,7 @@ $nutris = getNutrisPagina($pagina);
             Preenche os dados e envia o teu CV em PDF.
         </p>
 
-        <form action="enviar_candidatura.php" method="POST" enctype="multipart/form-data" class="mx-auto" style="max-width: 600px;">
+        <form id="formCandidatura" action="enviar_candidatura.php" method="POST" enctype="multipart/form-data" class="mx-auto" style="max-width: 600px;">
             <div class="mb-3">
                 <input type="text" name="nome" id="nome" placeholder="Nome *" required
                     class="form-control"
@@ -176,6 +176,9 @@ $nutris = getNutrisPagina($pagina);
                     style="border-radius: 0; border: none; background-color: #fff; padding: 1rem;"/>
             </div>
 
+            <!-- 🔹 reCAPTCHA v3 token -->
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
             <div class="text-center mb-3">
                 <small>Os campos assinalados com * são obrigatórios</small>
             </div>
@@ -188,10 +191,19 @@ $nutris = getNutrisPagina($pagina);
     </div>
 </section>
 
-
-
-    
-
+<!-- reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LcLecgrAAAAAIPzsKdH5IfxGyX4tQzxLRWnw00G"></script>
+<script>
+grecaptcha.ready(function() {
+    document.getElementById('formCandidatura').addEventListener('submit', function(e) {
+        e.preventDefault(); // espera token
+        grecaptcha.execute('6LcLecgrAAAAAIPzsKdH5IfxGyX4tQzxLRWnw00G', {action: 'candidatura'}).then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+            e.target.submit(); // envia o form
+        });
+    });
+});
+</script>
 
 
 <!--     <div class="row">

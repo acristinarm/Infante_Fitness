@@ -4,6 +4,17 @@ require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+$recaptcha = $_POST['g-recaptcha-response'] ?? '';
+$secret = "6LcLecgrAAAAAGH4tUE6bIB5HPbvR1iRAiO9Uqa8";
+
+$response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$recaptcha");
+$responseKeys = json_decode($response, true);
+
+if (empty($responseKeys["success"]) || ($responseKeys["score"] ?? 0) < 0.5) {
+    die("<p style='color:red; text-align:center;'>Verificação de reCAPTCHA falhou. Tenta novamente.</p>");
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'] ?? '';
     $email = $_POST['email'] ?? '';

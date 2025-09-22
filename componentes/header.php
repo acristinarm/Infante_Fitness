@@ -49,7 +49,7 @@ $banner = getBanner();
     <header id="mainHeader">
         <div class="container d-flex justify-content-between align-items-center">
             <!-- Logo -->
-            <a href="/index" class="logo">
+            <a href="/infante_fitness/index.php" class="logo">
             <img src="uploads/logo_branco.png" alt="Logo" style="height: 90px;">
             </a>
 
@@ -61,7 +61,7 @@ $banner = getBanner();
             <!-- Menu Desktop -->
             <nav class="nav-desktop d-none d-sm-flex">
             <ul class="nav">
-                <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/index.php">Home</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="/infante_fitness/infante_people.php">Infante People</a></li>
 
@@ -70,9 +70,9 @@ $banner = getBanner();
                         Serviços
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownServicos">
-                        <li><a class="dropdown-item" href="/precos">Preços</a></li>
-                        <li><a class="dropdown-item" href="/horarios">Horários</a></li>
-                        <li><a class="dropdown-item" href="/inscricao">Inscrição</a></li>
+                        <li><a class="dropdown-item" href="/infante_fitness/precos.php">Preços</a></li>
+                        <li><a class="dropdown-item" href="/infante_fitness/horarios.php">Horários</a></li>
+                        <li><a class="dropdown-item" href="/infante_fitness/inscricao.php">Inscrição</a></li>
                     </ul>
                 </li>
 
@@ -84,8 +84,8 @@ $banner = getBanner();
         <!-- Menu Mobile (colapsável) -->
         <div id="mobileMenu" class="d-sm-none collapse">
             <ul class="nav flex-column text-center py-2">
-                <li class="nav-item"><a class="nav-link" href="/index">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/infante_people">Infante People</a></li>                
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/index.php">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/infante_people.php">Infante People</a></li>                
                 <!-- Dropdown -->
 
                 <li class="nav-item dropdown">
@@ -93,13 +93,13 @@ $banner = getBanner();
                         Serviços
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end text-center" aria-labelledby="dropdownMobile">
-                        <li><a class="dropdown-item" href="/precos">Preços</a></li>
-                        <li><a class="dropdown-item" href="/horarios">Horários</a></li>
-                        <li><a class="dropdown-item" href="/inscricao">Inscrição</a></li>
+                        <li><a class="dropdown-item" href="/infante_fitness/precos.php">Preços</a></li>
+                        <li><a class="dropdown-item" href="/infante_fitness/horarios.php">Horários</a></li>
+                        <li><a class="dropdown-item" href="/infante_fitness/inscricao.php">Inscrição</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item"><a class="nav-link" href="/contactos">Contactos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/contactos.php">Contactos</a></li>
 
             </ul>
         </div>
@@ -111,7 +111,7 @@ $banner = getBanner();
 
             <div class="overlay-banner">
                 <div class="overlay-content text-center">
-                    <h1 class="titulo-banner">O TUA BOX. A TUA MOTIVAÇÃO.</h1>
+                    <h1 class="titulo-banner">A TUA BOX. A TUA MOTIVAÇÃO.</h1>
                     <p class="subtitulo-banner">Making People Better Since 2021!</p>
                     <a href="inscricao.php#experimentar" class="btn-experimentar">QUERO EXPERIMENTAR</a>
                 </div>

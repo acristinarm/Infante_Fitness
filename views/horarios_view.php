@@ -18,7 +18,7 @@ $horarios = getHorarios();
 
     <div class="row mt-4 conteudo_simples d-none d-sm-block px-5">
         <div class="col-12">
-            <img src="<?= $horarios["imagem"]; ?>" alt="Horário" class="img-fluid img_horarios">
+            <img src="<?= $horarios["imagem"]; ?>" alt="Horário" class="img_horarios">
         </div>
     </div>  
 
@@ -39,9 +39,9 @@ $horarios = getHorarios();
 
     </div>
 
-    <div class="row conteudo_simples d-block d-sm-none px-3">
+    <div class="row conteudo_simples d-block d-sm-none">
         <div class="col-12">
-            <img src="<?= $horarios["imagem"]; ?>" alt="Horário" class="img-fluid img_horarios_mobile">
+            <img src="<?= $horarios["imagem"]; ?>" alt="Horário" class="img_horarios_mobile">
         </div>
     </div> 
 

@@ -9,7 +9,6 @@
 
 body{
     font-family: 'BlenderPro', sans-serif !important;
-    max-width: 1600px !important;
     min-width: 360px !important;
 }
 
@@ -347,13 +346,37 @@ header.hide-header {
     }
 }
 
+.header-links{
+    background-color: rgba(1, 11, 21, 0.7) !important; 
+}
+
+.header-links img{
+    padding-left: 80px !important;
+}
+
+@media (max-width: 700px) {
+    .header-links img{
+        height: 55px !important;
+        padding-left: 30px !important;
+    }
+    .main_links{
+        padding-top: 0px !important;
+    }
+}
+
 
 /* --- MAIN --- */
+
+
+.main_links{
+    padding-top: 130px !important;
+}
 
 .conteudo_simples{
     margin: auto;
     background-color: var(--cor-branca); 
 }
+
 
 .linha_laranja{
     width: 350px;
@@ -369,9 +392,9 @@ header.hide-header {
     background-color: rgb(55, 206, 221);
 }
 
-.bem_vindo{
+.bem_vindo_links{
     margin-top: 46px !important;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     text-align: center;
     color: var(--cor-darkblue);
     font-weight: 400;
@@ -388,9 +411,9 @@ header.hide-header {
     margin-bottom: 60px;
 }
 
-.bem_vindo_mobile{
-    margin-top: 20px !important;
-    margin-bottom: 50px;
+.bem_vindo_mobile_links{
+    margin-top: 30px !important;
+    margin-bottom: 30px;
     text-align: center;
     color: var(--cor-darkblue);
     font-weight: 400;
