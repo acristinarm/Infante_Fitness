@@ -350,8 +350,13 @@ header.hide-header {
     background-color: rgba(1, 11, 21, 0.7) !important; 
 }
 
-.header-links img{
-    padding-left: 80px !important;
+@media (min-width: 701px) {
+    .header-links img{
+        padding-left: 80px !important;
+    }
+    .main_links{
+        margin-top: 130px !important;
+    }
 }
 
 @media (max-width: 700px) {
@@ -360,17 +365,12 @@ header.hide-header {
         padding-left: 30px !important;
     }
     .main_links{
-        padding-top: 0px !important;
+        margin-top: 80px !important;
     }
 }
 
 
 /* --- MAIN --- */
-
-
-.main_links{
-    padding-top: 130px !important;
-}
 
 .conteudo_simples{
     margin: auto;
