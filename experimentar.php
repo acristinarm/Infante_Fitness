@@ -29,6 +29,13 @@
     <script src="main.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: rgb(1, 11, 21); 
+        }
+    </style>
+
 </head>
 
 

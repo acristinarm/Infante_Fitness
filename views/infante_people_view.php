@@ -27,7 +27,7 @@ $nutris = getNutrisPagina($pagina);
         </div>
 
         <div class="col bem_vindo">
-            <div>Coaches</div>
+            <div>Treinadores</div>
         </div>
     
     </div>
@@ -40,7 +40,7 @@ $nutris = getNutrisPagina($pagina);
         </div>
 
         <div class="col bem_vindo_mobile">
-            <div>Coaches</div>
+            <div>Treinadores</div>
         </div>
 
     </div>

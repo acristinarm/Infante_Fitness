@@ -47,7 +47,7 @@ $servicos = getServicoPagina($pagina);
 
     </div>
 
-    <div class="row conteudo_simples d-block d-md-none mb-3">
+    <div class="row conteudo_simples d-block d-md-none mb-3 index_view">
 
         <div class="col">
             <div class="linha_laranja_mobile m-auto"></div>
