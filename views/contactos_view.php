@@ -54,9 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-
-<main class="container-fluid p-0"> 
-
 <main class="container-fluid p-0"> 
 
     <!-- Desktop -->
@@ -99,6 +96,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Formulário desktop -->
                 <div class="col-lg-5 ps-4">
                     <form action="enviar_email.php" method="POST" id="contactos_form">
+                        <!-- HONEYPOT FIELD (Para combater robôs) -->
+                        <input type="text" name="website" 
+                               style="position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; border: none; padding: 0;">
+                        <!-- FIM HONEYPOT -->
+
                         <label for="nome">*Nome</label><br>
                         <input type="text" id="nome" name="nome" required><br>
 
@@ -119,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <p class="preenchimento_obrig">* Campos de preenchimento obrigatório</p>
 
                         <button type="submit" class="btn btn-outline-dark px-4 py-2">Enviar</button>
-                    </form>                
+                    </form>                
                 </div>
             </div>
         </div>
@@ -146,6 +148,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Formulário mobile -->
                 <div class="col">
                     <form action="enviar_email.php" method="POST" id="contactos_form_mobile">
+                        <!-- HONEYPOT FIELD (Para combater robôs) -->
+                        <input type="text" name="website" 
+                               style="position: absolute; left: -9999px; opacity: 0; height: 0; width: 0; border: none; padding: 0;">
+                        <!-- FIM HONEYPOT -->
+
                         <label for="nome">*Nome</label> <br>
                         <input type="text" id="nome" name="nome" required><br>
 
@@ -199,13 +206,14 @@ grecaptcha.ready(function() {
 
     <div class="row w-100 p-0 mx-0 d-none d-sm-block">
         <div class="col p-0 mapa" style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%px;height:500px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8
-         &q=Avenida+Escritor+Costa+Barreto+3000+Valbom+Portugal"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+             &q=Avenida+Escritor+Costa+Barreto+3000+Valbom+Portugal"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
     </div>
 
     <div class="row d-block p-0 m-0 d-sm-none">
         <div class="col p-0 mapa_mobile" style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%;height:323px;"><div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8
-         &q=Avenida+Escritor+Costa+Barreto+3000+Valbom+Portugal"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
+             &q=Avenida+Escritor+Costa+Barreto+3000+Valbom+Portugal"></iframe></div><a class="google-map-html" href="https://www.bootstrapskins.com/themes" id="authmaps-data">premium bootstrap themes</a><style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}</style></div>
     </div>
 
 
 </main>
+

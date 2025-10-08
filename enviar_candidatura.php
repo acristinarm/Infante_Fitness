@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $responseKeys = json_decode($response, true);
 
     // Verifica sucesso e score >= 0.5
-    if (empty($responseKeys["success"]) || ($responseKeys["score"] ?? 0) < 0.5) {
+    if (empty($responseKeys["success"]) || ($responseKeys["score"] ?? 0) < 0.7) {
         die("<p style='color:red; text-align:center;'>Verificação de reCAPTCHA falhou. Tenta novamente.</p>");
     }
 
