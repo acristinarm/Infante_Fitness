@@ -777,6 +777,7 @@ textarea::placeholder{
         width: 210px !important;
         height: 210px !important;
         border-radius: 100% !important;
+        object-fit: cover;
 
     }
 
@@ -813,6 +814,7 @@ textarea::placeholder{
         width: 250px !important;
         height: 250px;
         border-radius: 100% !important;
+        object-fit: cover;
     }
 
     .card-body{
@@ -901,6 +903,7 @@ textarea::placeholder{
         width: 250px !important;
         height: 250px;
         border-radius: 100% !important;
+        object-fit: cover;
     }
 
     .card_nutris{
@@ -915,6 +918,7 @@ textarea::placeholder{
         width: 210px !important;
         height: 210px !important;
         border-radius: 100% !important;
+        object-fit: cover;
 
     }
 
