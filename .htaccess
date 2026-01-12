@@ -1,0 +1,18 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Permitir acesso direto à pasta uploads
+    RewriteCond %{REQUEST_URI} ^/uploads/ [NC]
+    RewriteRule ^ - [L]
+
+    # Esconder extensões .php
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^([^/]+)$ $1.php [NC,L]
+</IfModule>
+
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files>
+

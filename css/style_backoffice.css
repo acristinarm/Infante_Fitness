@@ -1,0 +1,109 @@
+body{
+    background-color: rgb(230, 227, 227) !important;
+}
+
+.navbar{
+    background-color: #1b1b1c;
+    height: 90px;
+}
+
+.navbar-brand{
+    font-weight: bolder;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-link.active {
+    color: rgb(63, 205, 205) !important;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(63, 205, 205);
+}
+
+.navbar a:hover {
+    color: rgb(63, 205, 205) !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1b1b1c;
+  color: #fff;
+  margin: auto;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid rgba(255, 255, 255) !important; /* Linhas internas visíveis */
+}
+
+
+th {
+  background-color: rgb(63, 205, 205);
+  color: #000;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+tr:hover {
+  background-color: rgba(63, 205, 205, 0.15);
+  transition: 0.3s ease-in-out;
+}
+
+/* Cor de fundo do menu dropdown */
+.dropdown-menu {
+  background-color: #1b1b1c !important;
+  border: 1px solid rgb(63, 205, 205);
+}
+
+/* Cor dos links dentro do dropdown */
+.dropdown-menu a {
+  color: #fff !important;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover nos itens */
+.dropdown-menu a:hover {
+  background-color: rgba(63, 205, 205, 0.2);
+  color: rgb(63, 205, 205) !important;
+}
+
+
+button,
+.button {
+  background-color: lightgray; 
+  color: #1b1b1c;
+  border: none;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover,
+.button:hover {
+  background-color: #1b1b1c;
+  color: lightgray;
+  transform: translateY(-2px);
+}
+
+button:active,
+.button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
