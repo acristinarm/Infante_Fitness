@@ -76,6 +76,8 @@ $banner = getBanner();
                     </ul>
                 </li>
 
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/testemunhos.php">Testemunhos</a></li>
+
                 <li class="nav-item"><a class="nav-link" href="/infante_fitness/contactos.php">Contactos</a></li>
             </ul>
             </nav>
@@ -98,6 +100,8 @@ $banner = getBanner();
                         <li><a class="dropdown-item" href="/infante_fitness/inscricao.php">Inscrição</a></li>
                     </ul>
                 </li>
+
+                <li class="nav-item"><a class="nav-link" href="/infante_fitness/testemunhos.php">Testemunhos</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="/infante_fitness/contactos.php">Contactos</a></li>
 
@@ -183,7 +187,8 @@ $banner = getBanner();
                         <img src="<?=$banner[1]["imagem"]; ?>" alt="">
                     <?php elseif ($menu_atual == "contactos"): ?>
                         <img src="<?=$banner[2]["imagem"]; ?>" alt="">
-                    <?php elseif ($menu_atual == "workouts"): ?>
+                    <?php elseif ($menu_atual == "testemunhos"): ?>
+                        <img src="<?=$banner[3]["imagem"]; ?>" alt="">
                     <?php endif; ?>
 
                 </div>

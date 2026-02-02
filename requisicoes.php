@@ -13,6 +13,7 @@ require_once("helpers/horarios_helper.php");
 require_once("helpers/precos_helper.php");
 require_once("helpers/inscricao_helper.php");
 require_once("helpers/servicos_helper.php");
+require_once("helpers/testemunhos_helper.php");
 
 
 ?>

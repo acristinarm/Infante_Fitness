@@ -89,6 +89,9 @@ if(!verificarLogin()){
                                     <a class="nav-link <?= ($menu_atual == "nutricionistas") ? "active" : ""; ?>" href="nutricionistas.php">Nutricionistas</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link <?= ($menu_atual == "testemunhos") ? "active" : ""; ?>" href="testemunhos.php">Testemunhos</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link <?= ($menu_atual == "contactos") ? "active" : ""; ?>" href="contactos.php">Contactos</a>
                                 </li>
                                 <li class="nav-item">

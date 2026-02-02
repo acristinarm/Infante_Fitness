@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // 1️⃣ Validar reCAPTCHA v3
     $recaptcha = $_POST['g-recaptcha-response'] ?? '';
-    $secret = $_ENV['RECAPTCHA_SECRET_KEY '];
+    $secret = $_ENV['RECAPTCHA_SECRET_KEY'];
 
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$recaptcha");
     $responseKeys = json_decode($response, true);
